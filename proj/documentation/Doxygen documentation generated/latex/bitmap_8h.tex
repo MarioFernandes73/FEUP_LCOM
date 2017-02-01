@@ -1,0 +1,155 @@
+\hypertarget{bitmap_8h}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/bitmap.h File Reference}
+\label{bitmap_8h}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/bitmap.\+h@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/bitmap.\+h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=223pt]{bitmap_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_bitmap_file_header}{Bitmap\+File\+Header}
+\item 
+struct \hyperlink{struct_bitmap_info_header}{Bitmap\+Info\+Header}
+\item 
+struct \hyperlink{struct_bitmap}{Bitmap}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment} \{ \hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a6ec599857e15466988726932dd592305}{A\+L\+I\+G\+N\+\_\+\+L\+E\+FT}, 
+\hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a5624165187e56db612253e608a45b1c6}{A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER}, 
+\hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a9c81840e8cad46418b39a8b74a246354}{A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2}{load\+Bitmap} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads a bmp image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4}{draw\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bitmap, int x, int y, \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment} alignment)
+\begin{DoxyCompactList}\small\item\em Draws an unscaled, unrotated bitmap at the given position. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga08c1d4f4fff81df260d979ea8fc1aa61}{delete\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bmp)
+\begin{DoxyCompactList}\small\item\em Destroys the given bitmap, freeing all resources used by it. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a}{get\+\_\+bitmaps} ()
+\begin{DoxyCompactList}\small\item\em Loads all the bitmaps used by calling load\+Bitmap function. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9}{draw\+\_\+black\+\_\+screen} ()
+\begin{DoxyCompactList}\small\item\em Draws a black screen using the black bar image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3}{draw\+\_\+main\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Draws the main menu, wich gives you two options\+: S\+T\+A\+RT or E\+X\+IT. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaa7519d8a181750afa183c3350c5f9598}{draw\+\_\+board} (int \hyperlink{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}{round})
+\begin{DoxyCompactList}\small\item\em Draws the game board, environment in wich the game will decurr (the gaming board shows the current round). \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaca0d178c01fee283d1e3386b9712736e}{draw\+\_\+player1\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player1\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522}{draw\+\_\+player2\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player2\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gae696a3d4ee82a15e937f5f8c11fa9057}{draw\+\_\+success\+\_\+copy} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces a successful copy of player1\textquotesingle{}s moves. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af}{draw\+\_\+failed\+\_\+copy} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces a failed copy of player1\textquotesingle{}s moves. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabbf5153c909fc82e7734744352e22de9}{draw\+\_\+thanks\+\_\+for\+\_\+playing} ()
+\begin{DoxyCompactList}\small\item\em A draw that says \char`\"{}\+Thank you for playing\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga556f9cfc8664aff3169e9775310a5144}{draw\+\_\+input} (int input)
+\begin{DoxyCompactList}\small\item\em A draws a given input given by a player. an input is a play made by a player (it can be selecting a geometrical figure on the board, preesing a key, or draw a positive slope with the mouse) \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga108608b0f2d804c84a271547036b6ffd}{draw\+\_\+cursor} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws the mouse cursor at a given location. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a}{draw\+\_\+number} (int number, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws a number(0-\/9) at a given location(x,y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf1aaa82e6e29c903bb1fda96ce708d27}{bitmap\+\_\+welcome}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga5240b87601f0b5aa3e67976c3ed240ed}{bitmap\+\_\+to}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga7cad4ac90d452221efb12d6156b53b22}{bitmap\+\_\+simonsays}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga87c8ef496268863adc00746941f79f44}{bitmap\+\_\+start}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga952f653fe87f4ca995595e2b7db6228f}{bitmap\+\_\+exit}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf81c286e8b6c034dd42b1e09dfb4c9d9}{bitmap\+\_\+triangle}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gac1d843b74dd56e98adf0c72f75a5a1d8}{bitmap\+\_\+circle}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacf0c500ba60d2cf03c116fe731b21ec9}{bitmap\+\_\+star}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaa6ea6c52c8712671d8ed350cde2f2313}{bitmap\+\_\+square}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga19d13e384604a13b7d8a0839aadd9234}{bitmap\+\_\+vertical\+\_\+white\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4610248f579630fea652a3704556c74c}{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gac6d8af40b0549ee19c8d2d146ac2844f}{bitmap\+\_\+last\+\_\+input}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2f913b78a0f833c9a04aef7f4b334062}{bitmap\+\_\+round}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga993712c0e2465ddf6682e1da844cb33f}{bitmap\+\_\+number\+\_\+0}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gae0e099ab280db078712dae7370590d69}{bitmap\+\_\+number\+\_\+1}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gabff0396d599ff9c20dc45260ac0023e3}{bitmap\+\_\+number\+\_\+2}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga691847399b96e5814e96eaa88d89a565}{bitmap\+\_\+number\+\_\+3}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga0d04224487333eb3e7b5e2f6f84c0c7c}{bitmap\+\_\+number\+\_\+4}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2462605cb4d4dee9006653ffafe12fbc}{bitmap\+\_\+number\+\_\+5}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga70b99f25995d8138d51132de297e66ba}{bitmap\+\_\+number\+\_\+6}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga8c4df34a71fbac148bc9ace8ba6095fa}{bitmap\+\_\+number\+\_\+7}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga0b28cdc22a12665fb94f55d1c9d269f2}{bitmap\+\_\+number\+\_\+8}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga8af434fd1017cdac47579582bac12552}{bitmap\+\_\+number\+\_\+9}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3a3b4fedabcc22d1b0f34e651fcfdb46}{bitmap\+\_\+black\+\_\+square}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga508d397d656733b6434a84217519cf27}{bitmap\+\_\+a\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4f21d75b1561dd84963d37fb8149544b}{bitmap\+\_\+w\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaec5fd5db7147e57f72076387bc78ffc9}{bitmap\+\_\+s\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3887cbeee8746670c47e70090cc926ae}{bitmap\+\_\+d\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga25ccce5a865640e111d5c3e6fd8405f5}{bitmap\+\_\+black\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2ba19da7f92ccbe27fd209c98816837a}{bitmap\+\_\+player1}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga63e9b3ca144cce02448900ffe9add6c4}{bitmap\+\_\+player2}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4eb982d201096abdac3cacd3f6459ff2}{bitmap\+\_\+cpu}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga6fa1dd9e73670e1d22f5b6d258eb0e77}{bitmap\+\_\+turn}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gae897f24816ba9a98f564b2b7ff488bc2}{bitmap\+\_\+cursor}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga1f04a1ac0e8402f5de2230baf1f6818d}{bitmap\+\_\+congratulations}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf4ba721599394ebe28ce58f495fa1226}{bitmap\+\_\+nice}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga68d193359f4b1253056be87ab752f5f0}{bitmap\+\_\+plagiarism}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga47000f83189d2a2f74f1148050ee338b}{bitmap\+\_\+happy\+\_\+face}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaaedffcc0ad02fe92aaae449a289619e3}{bitmap\+\_\+ups}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacc8a2c20312c8ec30b84297cbf6df6f2}{bitmap\+\_\+you}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga5d96b14aaf8cbac173f6d809be1ff7d4}{bitmap\+\_\+failed}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga712c5447dd57d83342185a9ac9ca7015}{bitmap\+\_\+sad\+\_\+face}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga227e788aa82989593af33621bfb230bd}{bitmap\+\_\+thanks}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga04b3490379f60798e7a6de171979a90f}{bitmap\+\_\+for}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga57060e5b51d9603d9fc393526c965a3b}{bitmap\+\_\+playing}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacb59d00d1a96d8b830bddde99bc4f7dd}{bitmap\+\_\+final\+\_\+score}
+\end{DoxyCompactItemize}

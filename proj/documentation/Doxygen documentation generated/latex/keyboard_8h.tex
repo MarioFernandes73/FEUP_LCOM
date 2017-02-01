@@ -1,0 +1,215 @@
+\hypertarget{keyboard_8h}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/keyboard.h File Reference}
+\label{keyboard_8h}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/keyboard.\+h@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/keyboard.\+h}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\newline
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\newline
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$minix/com.\+h$>$}\newline
+Include dependency graph for keyboard.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{keyboard_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(n)~(0x01$<$$<$(n))
+\item 
+\#define \hyperlink{keyboard_8h_a4af1b6159e447ba72652bb7fcdfa726e}{E\+SC}~129
+\begin{DoxyCompactList}\small\item\em escape key break code \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_ad24f37ae74e78dce5b35dbc90b40db66}{Wkey}~145
+\begin{DoxyCompactList}\small\item\em escape key W code \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_a6ef95e8d2efbfed127d111fdda4269df}{Skey}~159
+\begin{DoxyCompactList}\small\item\em escape key S code \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_ac0a9a740cc480b7c7f77d3baf2781769}{Akey}~158
+\begin{DoxyCompactList}\small\item\em escape key A code \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_a52b4b13d541c2df1895763c3a6151dfc}{Dkey}~160
+\begin{DoxyCompactList}\small\item\em escape key D code \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_a73d6572224ad0ac84a8587615cef947c}{F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE}~0x\+E0
+\begin{DoxyCompactList}\small\item\em first byte of two scan code key \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_ad6ff09b5058171ce69f6485dbef6bfaa}{B\+R\+E\+A\+K\+C\+O\+DE}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(7)
+\item 
+\#define \hyperlink{keyboard_8h_a5c1072213ce8d8cd43628c4319ae0391}{K\+B\+D\+\_\+\+I\+RQ}~1
+\begin{DoxyCompactList}\small\item\em K\+BD I\+RQ line. \end{DoxyCompactList}\item 
+\#define \hyperlink{keyboard_8h_aac874ec0659e2888f16bfc9d224e7b06}{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD}~1
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{keyboard_8h_ad0df6c5f74d323c4fb84d399774b7133}{K\+B\+D\+\_\+subscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Subscribes and enables K\+BD interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{keyboard_8h_ad10548c951a05064c50742cddcbda93d}{K\+B\+D\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes K\+BD interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{keyboard_8h_a2c4a40f39d80a858fd65210916711edb}{K\+B\+D\+\_\+handler} ()
+\begin{DoxyCompactList}\small\item\em The game\textquotesingle{}s keyboard interrupt handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{keyboard_8h_ac0a9a740cc480b7c7f77d3baf2781769}\label{keyboard_8h_ac0a9a740cc480b7c7f77d3baf2781769}} 
+\index{keyboard.\+h@{keyboard.\+h}!Akey@{Akey}}
+\index{Akey@{Akey}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{Akey}{Akey}}
+{\footnotesize\ttfamily \#define Akey~158}
+
+
+
+escape key A code 
+
+\mbox{\Hypertarget{keyboard_8h_a3a8ea58898cb58fc96013383d39f482c}\label{keyboard_8h_a3a8ea58898cb58fc96013383d39f482c}} 
+\index{keyboard.\+h@{keyboard.\+h}!B\+IT@{B\+IT}}
+\index{B\+IT@{B\+IT}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{B\+IT}{BIT}}
+{\footnotesize\ttfamily \#define B\+IT(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~(0x01$<$$<$(n))}
+
+\mbox{\Hypertarget{keyboard_8h_ad6ff09b5058171ce69f6485dbef6bfaa}\label{keyboard_8h_ad6ff09b5058171ce69f6485dbef6bfaa}} 
+\index{keyboard.\+h@{keyboard.\+h}!B\+R\+E\+A\+K\+C\+O\+DE@{B\+R\+E\+A\+K\+C\+O\+DE}}
+\index{B\+R\+E\+A\+K\+C\+O\+DE@{B\+R\+E\+A\+K\+C\+O\+DE}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{B\+R\+E\+A\+K\+C\+O\+DE}{BREAKCODE}}
+{\footnotesize\ttfamily \#define B\+R\+E\+A\+K\+C\+O\+DE~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(7)}
+
+that defines a breakcode \mbox{\Hypertarget{keyboard_8h_a52b4b13d541c2df1895763c3a6151dfc}\label{keyboard_8h_a52b4b13d541c2df1895763c3a6151dfc}} 
+\index{keyboard.\+h@{keyboard.\+h}!Dkey@{Dkey}}
+\index{Dkey@{Dkey}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{Dkey}{Dkey}}
+{\footnotesize\ttfamily \#define Dkey~160}
+
+
+
+escape key D code 
+
+\mbox{\Hypertarget{keyboard_8h_a4af1b6159e447ba72652bb7fcdfa726e}\label{keyboard_8h_a4af1b6159e447ba72652bb7fcdfa726e}} 
+\index{keyboard.\+h@{keyboard.\+h}!E\+SC@{E\+SC}}
+\index{E\+SC@{E\+SC}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{E\+SC}{ESC}}
+{\footnotesize\ttfamily \#define E\+SC~129}
+
+
+
+escape key break code 
+
+\mbox{\Hypertarget{keyboard_8h_a73d6572224ad0ac84a8587615cef947c}\label{keyboard_8h_a73d6572224ad0ac84a8587615cef947c}} 
+\index{keyboard.\+h@{keyboard.\+h}!F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE@{F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE}}
+\index{F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE@{F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE}{FIRST\_BYTE}}
+{\footnotesize\ttfamily \#define F\+I\+R\+S\+T\+\_\+\+B\+Y\+TE~0x\+E0}
+
+
+
+first byte of two scan code key 
+
+\mbox{\Hypertarget{keyboard_8h_aac874ec0659e2888f16bfc9d224e7b06}\label{keyboard_8h_aac874ec0659e2888f16bfc9d224e7b06}} 
+\index{keyboard.\+h@{keyboard.\+h}!H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD@{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD}}
+\index{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD@{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD}{HOOK\_ID\_BIT\_KBD}}
+{\footnotesize\ttfamily \#define H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+K\+BD~1}
+
+\mbox{\Hypertarget{keyboard_8h_a5c1072213ce8d8cd43628c4319ae0391}\label{keyboard_8h_a5c1072213ce8d8cd43628c4319ae0391}} 
+\index{keyboard.\+h@{keyboard.\+h}!K\+B\+D\+\_\+\+I\+RQ@{K\+B\+D\+\_\+\+I\+RQ}}
+\index{K\+B\+D\+\_\+\+I\+RQ@{K\+B\+D\+\_\+\+I\+RQ}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+\+I\+RQ}{KBD\_IRQ}}
+{\footnotesize\ttfamily \#define K\+B\+D\+\_\+\+I\+RQ~1}
+
+
+
+K\+BD I\+RQ line. 
+
+\mbox{\Hypertarget{keyboard_8h_a6ef95e8d2efbfed127d111fdda4269df}\label{keyboard_8h_a6ef95e8d2efbfed127d111fdda4269df}} 
+\index{keyboard.\+h@{keyboard.\+h}!Skey@{Skey}}
+\index{Skey@{Skey}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{Skey}{Skey}}
+{\footnotesize\ttfamily \#define Skey~159}
+
+
+
+escape key S code 
+
+\mbox{\Hypertarget{keyboard_8h_ad24f37ae74e78dce5b35dbc90b40db66}\label{keyboard_8h_ad24f37ae74e78dce5b35dbc90b40db66}} 
+\index{keyboard.\+h@{keyboard.\+h}!Wkey@{Wkey}}
+\index{Wkey@{Wkey}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{Wkey}{Wkey}}
+{\footnotesize\ttfamily \#define Wkey~145}
+
+
+
+escape key W code 
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8h_a2c4a40f39d80a858fd65210916711edb}\label{keyboard_8h_a2c4a40f39d80a858fd65210916711edb}} 
+\index{keyboard.\+h@{keyboard.\+h}!K\+B\+D\+\_\+handler@{K\+B\+D\+\_\+handler}}
+\index{K\+B\+D\+\_\+handler@{K\+B\+D\+\_\+handler}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+handler()}{KBD\_handler()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The game\textquotesingle{}s keyboard interrupt handler. 
+
+\begin{DoxyReturn}{Returns}
+Returns a number according to the key pressed(input), each key has a correspondent number 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{keyboard_8h_a2c4a40f39d80a858fd65210916711edb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_a2c4a40f39d80a858fd65210916711edb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_ad0df6c5f74d323c4fb84d399774b7133}\label{keyboard_8h_ad0df6c5f74d323c4fb84d399774b7133}} 
+\index{keyboard.\+h@{keyboard.\+h}!K\+B\+D\+\_\+subscribe\+\_\+int@{K\+B\+D\+\_\+subscribe\+\_\+int}}
+\index{K\+B\+D\+\_\+subscribe\+\_\+int@{K\+B\+D\+\_\+subscribe\+\_\+int}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+subscribe\+\_\+int()}{KBD\_subscribe\_int()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables K\+BD interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_ad0df6c5f74d323c4fb84d399774b7133_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8h_ad10548c951a05064c50742cddcbda93d}\label{keyboard_8h_ad10548c951a05064c50742cddcbda93d}} 
+\index{keyboard.\+h@{keyboard.\+h}!K\+B\+D\+\_\+unsubscribe\+\_\+int@{K\+B\+D\+\_\+unsubscribe\+\_\+int}}
+\index{K\+B\+D\+\_\+unsubscribe\+\_\+int@{K\+B\+D\+\_\+unsubscribe\+\_\+int}!keyboard.\+h@{keyboard.\+h}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+unsubscribe\+\_\+int()}{KBD\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes K\+BD interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8h_ad10548c951a05064c50742cddcbda93d_icgraph}
+\end{center}
+\end{figure}

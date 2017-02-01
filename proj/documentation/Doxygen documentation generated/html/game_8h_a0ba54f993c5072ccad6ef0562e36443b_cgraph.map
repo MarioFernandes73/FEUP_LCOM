@@ -1,0 +1,18 @@
+<map id="timer_state_machine" name="timer_state_machine">
+<area shape="rect" id="node2" href="$group___bitmap.html#ga83361e027b6f0dd917305f1f82dedda3" title="Draws the main menu, wich gives you two options: START or EXIT. " alt="" coords="217,5,339,32"/>
+<area shape="rect" id="node8" href="$game_8c.html#a7bd272e601a5455dea734c829bf0feb4" title="is used to make a timeout(wait a number of seconds without doing anything) " alt="" coords="227,461,329,488"/>
+<area shape="rect" id="node9" href="$group___bitmap.html#gaca0d178c01fee283d1e3386b9712736e" title="A draw that announces player1&#39;s turn to play. " alt="" coords="215,56,341,83"/>
+<area shape="rect" id="node10" href="$group___bitmap.html#gaa7519d8a181750afa183c3350c5f9598" title="Draws the game board, environment in wich the game will decurr (the gaming board shows the current ro..." alt="" coords="234,360,322,387"/>
+<area shape="rect" id="node12" href="$group___bitmap.html#ga556f9cfc8664aff3169e9775310a5144" title="A draws a given input given by a player. an input is a play made by a player (it can be selecting a g..." alt="" coords="433,461,517,488"/>
+<area shape="rect" id="node13" href="$group___bitmap.html#ga9af400ed66deb4c3aff712d9a7e9f522" title="A draw that announces player2&#39;s turn to play. " alt="" coords="215,107,341,133"/>
+<area shape="rect" id="node14" href="$bitmap_8c.html#a9c8f7086bfab6b8558ab5fdfca5e4e63" title="draw_successful_copy" alt="" coords="201,157,355,184"/>
+<area shape="rect" id="node15" href="$group___bitmap.html#ga06ba1c351da1ccdfa323137861c1a9af" title="A draw that announces a failed copy of player1&#39;s moves. " alt="" coords="217,208,339,235"/>
+<area shape="rect" id="node16" href="$bitmap_8c.html#afd011e7c56424f96bba293494afa1f2c" title="draw_score" alt="" coords="234,309,322,336"/>
+<area shape="rect" id="node17" href="$group___bitmap.html#gabbf5153c909fc82e7734744352e22de9" title="A draw that says &quot;Thank you for playing&quot;. " alt="" coords="196,259,360,285"/>
+<area shape="rect" id="node3" href="$group___bitmap.html#ga66c6cdf9473527bd3dcbab53d147d5b9" title="Draws a black screen using the black bar image. " alt="" coords="408,157,541,184"/>
+<area shape="rect" id="node5" href="$group___bitmap.html#ga18d05a1c671f4638bc63d37874efb9d4" title="Draws an unscaled, unrotated bitmap at the given position. " alt="" coords="589,208,680,235"/>
+<area shape="rect" id="node4" href="$group__video__gr.html#ga7ee85b0f333d227380a2c43e5fb8507a" title="Gives the current video vertical resolution. " alt="" coords="730,157,851,184"/>
+<area shape="rect" id="node6" href="$group__video__gr.html#gae2b9b38f4f97e1c580123c8e9a993353" title="Gives the current video horizontal resolution. " alt="" coords="730,259,851,285"/>
+<area shape="rect" id="node7" href="$group__video__gr.html#ga0823d182cf2b320e5f344bdc420a02d0" title="Gives the double buffer&#39;s address. " alt="" coords="728,208,853,235"/>
+<area shape="rect" id="node11" href="$group___bitmap.html#ga97df0f6e4184d84c9e3871042b94bc3a" title="Draws a number(0&#45;9) at a given location(x,y) " alt="" coords="425,360,524,387"/>
+</map>

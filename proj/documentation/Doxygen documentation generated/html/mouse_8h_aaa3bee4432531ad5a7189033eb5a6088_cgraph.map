@@ -1,0 +1,4 @@
+<map id="write_mouse" name="write_mouse">
+<area shape="rect" id="node2" href="$kbc_8c.html#a6a718d99ee741349a4e9f0af76ddce00" title="Reads the KBC status byte and checks if the input buffer is empty so that we write to it..." alt="" coords="148,5,291,32"/>
+<area shape="rect" id="node3" href="$kbc_8c.html#a553a3e42899ae0907eed9a576ab77939" title="Reads the KBC status byte and checks if the output buffer is full so that we read from it..." alt="" coords="149,56,289,83"/>
+</map>

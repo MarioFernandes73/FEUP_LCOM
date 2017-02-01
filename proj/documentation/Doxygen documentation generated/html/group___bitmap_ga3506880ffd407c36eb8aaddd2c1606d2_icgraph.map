@@ -1,0 +1,6 @@
+<map id="loadBitmap" name="loadBitmap">
+<area shape="rect" id="node2" href="$group___bitmap.html#gabda6654c65348aa9c06a9ae0e9562b9a" title="Loads all the bitmaps used by calling loadBitmap function. " alt="" coords="140,5,233,32"/>
+<area shape="rect" id="node3" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="281,5,367,32"/>
+<area shape="rect" id="node4" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="415,5,493,32"/>
+<area shape="rect" id="node5" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="541,5,592,32"/>
+</map>

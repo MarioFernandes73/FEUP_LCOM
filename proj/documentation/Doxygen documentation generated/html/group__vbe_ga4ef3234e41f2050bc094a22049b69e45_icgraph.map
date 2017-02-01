@@ -1,0 +1,7 @@
+<map id="vbe_get_mode_info" name="vbe_get_mode_info">
+<area shape="rect" id="node2" href="$group__video__gr.html#ga06d4b54021d33d2447a61b9de3982810" title="maps the VRAM address " alt="" coords="185,5,277,32"/>
+<area shape="rect" id="node3" href="$group__video__gr.html#gacef21667c79365d57a084bed994c2189" title="Initializes the video module in graphics mode. " alt="" coords="325,5,384,32"/>
+<area shape="rect" id="node4" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="432,5,517,32"/>
+<area shape="rect" id="node5" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="565,5,644,32"/>
+<area shape="rect" id="node6" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="692,5,743,32"/>
+</map>

@@ -1,0 +1,125 @@
+\hypertarget{group__vbe}{}\section{vbe}
+\label{group__vbe}\index{vbe@{vbe}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct____attribute____}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__vbe_ga4ef3234e41f2050bc094a22049b69e45}{vbe\+\_\+get\+\_\+mode\+\_\+info} (unsigned short mode, vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$vmi\+\_\+p)
+\begin{DoxyCompactList}\small\item\em Returns information on the input V\+BE mode, including screen dimensions, color depth and V\+R\+AM physical address. \end{DoxyCompactList}\item 
+int \hyperlink{group__vbe_ga18c7989ffdce07149a4f948798afeca5}{vbe\+\_\+get\+\_\+controller\+\_\+info} (vbe\+\_\+controller\+\_\+info\+\_\+t $\ast$vmi\+\_\+p)
+\end{DoxyCompactItemize}
+\subsection*{V\+BE Mode Info Block}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__vbe_ga2d1a8b0e816e406118cd71de77b25980}{A\+C\+C\+E\+S\+S\+\_\+\+V\+BE}~0x10
+\item 
+\#define \hyperlink{group__vbe_ga02477c4996ff058aee590b54f2146eb5}{V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE}~0x4\+F02
+\item 
+\#define \hyperlink{group__vbe_gab9d80b9e6d7846ea3fa090c817771866}{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE}~0x4\+F01
+\item 
+\#define \hyperlink{group__vbe_ga7850c02defc99773b2704700c6cab3fd}{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}~0x4\+F00
+\item 
+\#define \hyperlink{group__vbe_ga3ad7c0b541b23959da95fb0963ae87ff}{D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(0)
+\item 
+\#define \hyperlink{group__vbe_gafbbec0fabb4cff4fcb019abaf5009b15}{V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(1)
+\item 
+\#define \hyperlink{group__vbe_gaf0836b8b975bc8425e8ae42c7a36097e}{N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(2)
+\item 
+\#define \hyperlink{group__vbe_ga31c4f01ef75778f174c6d73864661fe4}{V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND}~-\/1
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions related to the V\+BE standard 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__vbe_ga2d1a8b0e816e406118cd71de77b25980}\label{group__vbe_ga2d1a8b0e816e406118cd71de77b25980}} 
+\index{vbe@{vbe}!A\+C\+C\+E\+S\+S\+\_\+\+V\+BE@{A\+C\+C\+E\+S\+S\+\_\+\+V\+BE}}
+\index{A\+C\+C\+E\+S\+S\+\_\+\+V\+BE@{A\+C\+C\+E\+S\+S\+\_\+\+V\+BE}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{A\+C\+C\+E\+S\+S\+\_\+\+V\+BE}{ACCESS\_VBE}}
+{\footnotesize\ttfamily \#define A\+C\+C\+E\+S\+S\+\_\+\+V\+BE~0x10}
+
+Packed V\+BE Mode Info Block \mbox{\Hypertarget{group__vbe_ga3ad7c0b541b23959da95fb0963ae87ff}\label{group__vbe_ga3ad7c0b541b23959da95fb0963ae87ff}} 
+\index{vbe@{vbe}!D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE@{D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE}}
+\index{D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE@{D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE}{DAC\_SWITCHABLE}}
+{\footnotesize\ttfamily \#define D\+A\+C\+\_\+\+S\+W\+I\+T\+C\+H\+A\+B\+LE~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(0)}
+
+\mbox{\Hypertarget{group__vbe_gaf0836b8b975bc8425e8ae42c7a36097e}\label{group__vbe_gaf0836b8b975bc8425e8ae42c7a36097e}} 
+\index{vbe@{vbe}!N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC@{N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC}}
+\index{N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC@{N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC}{NOT\_NORMAL\_RAMDAC}}
+{\footnotesize\ttfamily \#define N\+O\+T\+\_\+\+N\+O\+R\+M\+A\+L\+\_\+\+R\+A\+M\+D\+AC~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(2)}
+
+\mbox{\Hypertarget{group__vbe_ga7850c02defc99773b2704700c6cab3fd}\label{group__vbe_ga7850c02defc99773b2704700c6cab3fd}} 
+\index{vbe@{vbe}!V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}}
+\index{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER@{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER}{VBE\_RETURN\_CONTROLLER}}
+{\footnotesize\ttfamily \#define V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+C\+O\+N\+T\+R\+O\+L\+L\+ER~0x4\+F00}
+
+\mbox{\Hypertarget{group__vbe_gab9d80b9e6d7846ea3fa090c817771866}\label{group__vbe_gab9d80b9e6d7846ea3fa090c817771866}} 
+\index{vbe@{vbe}!V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE@{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE}}
+\index{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE@{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE}{VBE\_RETURN\_MODE}}
+{\footnotesize\ttfamily \#define V\+B\+E\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+M\+O\+DE~0x4\+F01}
+
+\mbox{\Hypertarget{group__vbe_ga02477c4996ff058aee590b54f2146eb5}\label{group__vbe_ga02477c4996ff058aee590b54f2146eb5}} 
+\index{vbe@{vbe}!V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE@{V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE}}
+\index{V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE@{V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE}{VBE\_SET\_MODE}}
+{\footnotesize\ttfamily \#define V\+B\+E\+\_\+\+S\+E\+T\+\_\+\+M\+O\+DE~0x4\+F02}
+
+\mbox{\Hypertarget{group__vbe_gafbbec0fabb4cff4fcb019abaf5009b15}\label{group__vbe_gafbbec0fabb4cff4fcb019abaf5009b15}} 
+\index{vbe@{vbe}!V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE}}
+\index{V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE@{V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE}{VGA\_INCOMPATIBLE}}
+{\footnotesize\ttfamily \#define V\+G\+A\+\_\+\+I\+N\+C\+O\+M\+P\+A\+T\+I\+B\+LE~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(1)}
+
+\mbox{\Hypertarget{group__vbe_ga31c4f01ef75778f174c6d73864661fe4}\label{group__vbe_ga31c4f01ef75778f174c6d73864661fe4}} 
+\index{vbe@{vbe}!V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND@{V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND}}
+\index{V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND@{V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND}{VIDEO\_MODE\_END}}
+{\footnotesize\ttfamily \#define V\+I\+D\+E\+O\+\_\+\+M\+O\+D\+E\+\_\+\+E\+ND~-\/1}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__vbe_ga18c7989ffdce07149a4f948798afeca5}\label{group__vbe_ga18c7989ffdce07149a4f948798afeca5}} 
+\index{vbe@{vbe}!vbe\+\_\+get\+\_\+controller\+\_\+info@{vbe\+\_\+get\+\_\+controller\+\_\+info}}
+\index{vbe\+\_\+get\+\_\+controller\+\_\+info@{vbe\+\_\+get\+\_\+controller\+\_\+info}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{vbe\+\_\+get\+\_\+controller\+\_\+info()}{vbe\_get\_controller\_info()}}
+{\footnotesize\ttfamily int vbe\+\_\+get\+\_\+controller\+\_\+info (\begin{DoxyParamCaption}\item[{vbe\+\_\+controller\+\_\+info\+\_\+t $\ast$}]{vmi\+\_\+p }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{group__vbe_ga4ef3234e41f2050bc094a22049b69e45}\label{group__vbe_ga4ef3234e41f2050bc094a22049b69e45}} 
+\index{vbe@{vbe}!vbe\+\_\+get\+\_\+mode\+\_\+info@{vbe\+\_\+get\+\_\+mode\+\_\+info}}
+\index{vbe\+\_\+get\+\_\+mode\+\_\+info@{vbe\+\_\+get\+\_\+mode\+\_\+info}!vbe@{vbe}}
+\subsubsection{\texorpdfstring{vbe\+\_\+get\+\_\+mode\+\_\+info()}{vbe\_get\_mode\_info()}}
+{\footnotesize\ttfamily int vbe\+\_\+get\+\_\+mode\+\_\+info (\begin{DoxyParamCaption}\item[{unsigned short}]{mode,  }\item[{vbe\+\_\+mode\+\_\+info\+\_\+t $\ast$}]{vmi\+\_\+p }\end{DoxyParamCaption})}
+
+
+
+Returns information on the input V\+BE mode, including screen dimensions, color depth and V\+R\+AM physical address. 
+
+Initializes unpacked vbe\+\_\+mode\+\_\+\+\_\+info\+\_\+t structure passed as an address with the information of the input mode, by calling V\+BE function 0x01 Return V\+BE Mode Information and unpacking the Mode\+Info\+Block struct returned by that function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & mode whose information should be returned \\
+\hline
+{\em vmi\+\_\+p} & address of vbe\+\_\+mode\+\_\+info\+\_\+t structure to be initialized \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 on success, non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__vbe_ga4ef3234e41f2050bc094a22049b69e45_icgraph}
+\end{center}
+\end{figure}

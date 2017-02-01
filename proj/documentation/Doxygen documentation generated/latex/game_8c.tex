@@ -1,0 +1,310 @@
+\hypertarget{game_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/game.c File Reference}
+\label{game_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/game.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/game.\+c}}
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+Include dependency graph for game.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{game_8c_a434350c0629d48af15132bd626ff0e7b}{simonsays} ()
+\begin{DoxyCompactList}\small\item\em main function that calls the game interruption handlers and the game state machine funtions \end{DoxyCompactList}\item 
+void \hyperlink{game_8c_a8101733e49b7935d3b1b8d2bb83dd42f}{state\+\_\+machine} (int input)
+\begin{DoxyCompactList}\small\item\em state machine that changes the game state according to the inputs given by the players \end{DoxyCompactList}\item 
+int \hyperlink{game_8c_a0ba54f993c5072ccad6ef0562e36443b}{timer\+\_\+state\+\_\+machine} (int input)
+\begin{DoxyCompactList}\small\item\em state machine that changes the game state according to the inputs given by the players ,makes the time pauses and draws the screen according to the current state \end{DoxyCompactList}\item 
+int \hyperlink{game_8c_a7bd272e601a5455dea734c829bf0feb4}{check\+Timeout} (int pause\+\_\+time)
+\begin{DoxyCompactList}\small\item\em is used to make a timeout(wait a number of seconds without doing anything) \end{DoxyCompactList}\item 
+int \hyperlink{game_8c_acee4b53c87749506d4f93ed0bdd32ccb}{compare\+\_\+arrays} (int $\ast$array1, int $\ast$array2, int size)
+\begin{DoxyCompactList}\small\item\em compares the first size positions of two arrays \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{game_8c_acf78d5ab53d26add4184578b9732a6a0}{escape} = 0
+\item 
+static int \hyperlink{game_8c_a312bc2c706f64a3ba78f54cad26d9402}{player2\+\_\+score} =0
+\item 
+static int \hyperlink{game_8c_a0d7ec96959b5e2328cb30a4a7e7dda10}{player1\+\_\+array} \mbox{[}10\mbox{]}
+\item 
+static int \hyperlink{game_8c_a08cc02a3fdfc39ca7dce0da405d46872}{player2\+\_\+array} \mbox{[}10\mbox{]}
+\item 
+static int \hyperlink{game_8c_a401e942526aac47cef94f478182486e7}{position} =0
+\item 
+static int \hyperlink{game_8c_a493b57f443cc38b3d3df9c1e584d9d82}{timeout} =0
+\item 
+static int \hyperlink{game_8c_a4c5da45addccd0b2a643a6b73c2f3214}{timeout\+\_\+started} =0
+\item 
+static int \hyperlink{game_8c_a50f7ef6ef3124abc70fbd30e6c5f06ce}{timeout\+\_\+entered} =0
+\item 
+static unsigned int \hyperlink{game_8c_ab54283a672f4b80136585c9973814206}{timer\+\_\+counter} =0
+\item 
+static unsigned int \hyperlink{game_8c_a83e57ce9bd59cfa0995c2e2c8589c274}{time} = 0
+\item 
+static unsigned int \hyperlink{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}{round} = 1
+\item 
+static int \hyperlink{game_8c_ab2623c3ab961285567b984a662aa0a26}{mouse\+\_\+x\+\_\+coord}
+\item 
+static int \hyperlink{game_8c_aadada65942cf173e32057ab132f6be0c}{mouse\+\_\+y\+\_\+coord}
+\item 
+\hyperlink{gamevariables_8h_a0a4ccc23c2081d8587459bfbe0bbeee4}{game\+\_\+turn\+\_\+t} \hyperlink{game_8c_a9f96e639d82878ed2a43b4d80b45f626}{game\+\_\+turn} = \hyperlink{gamevariables_8h_a0a4ccc23c2081d8587459bfbe0bbeee4a77d1b58e26a2a3d61ce38e09764cbc19}{P\+L\+A\+Y\+E\+R1}
+\item 
+\hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t} \hyperlink{game_8c_aed766d1a38b70be51df494da921471fa}{game\+\_\+state} = \hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414dac22743f1fc74de09544ecc9bab74a17b}{M\+A\+I\+N\+\_\+\+M\+E\+NU}
+\item 
+\hyperlink{gamevariables_8h_a2282a264f9691d1742756ac5e4929238}{player\+\_\+state\+\_\+t} \hyperlink{game_8c_a828d22214652902b5071899608fb1169}{player\+\_\+state} = \hyperlink{gamevariables_8h_a2282a264f9691d1742756ac5e4929238a88ec7d5086d2469ba843c7fcceade8a6}{D\+E\+F\+A\+U\+LT}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game_8c_a7bd272e601a5455dea734c829bf0feb4}\label{game_8c_a7bd272e601a5455dea734c829bf0feb4}} 
+\index{game.\+c@{game.\+c}!check\+Timeout@{check\+Timeout}}
+\index{check\+Timeout@{check\+Timeout}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{check\+Timeout()}{checkTimeout()}}
+{\footnotesize\ttfamily int check\+Timeout (\begin{DoxyParamCaption}\item[{int}]{pause\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+is used to make a timeout(wait a number of seconds without doing anything) 
+
+is useful between turns and other cases
+
+
+\begin{DoxyParams}{Parameters}
+{\em pause\+\_\+time} & indicates the timeout number of seconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if a timeout has started(only returns 1 in the beggining of the timeout, if we are in the middle of the timeout it returns 0), returns zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a7bd272e601a5455dea734c829bf0feb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_acee4b53c87749506d4f93ed0bdd32ccb}\label{game_8c_acee4b53c87749506d4f93ed0bdd32ccb}} 
+\index{game.\+c@{game.\+c}!compare\+\_\+arrays@{compare\+\_\+arrays}}
+\index{compare\+\_\+arrays@{compare\+\_\+arrays}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{compare\+\_\+arrays()}{compare\_arrays()}}
+{\footnotesize\ttfamily int compare\+\_\+arrays (\begin{DoxyParamCaption}\item[{int $\ast$}]{array1,  }\item[{int $\ast$}]{array2,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+compares the first size positions of two arrays 
+
+if the first size positions are equal, then we consider both arrays equal
+
+
+\begin{DoxyParams}{Parameters}
+{\em array1} & first array to compare\\
+\hline
+{\em array2} & second array to compare\\
+\hline
+\end{DoxyParams}
+number of position to be compared
+
+\begin{DoxyReturn}{Returns}
+Returns 1 the arrays are equal, returns zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_acee4b53c87749506d4f93ed0bdd32ccb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a434350c0629d48af15132bd626ff0e7b}\label{game_8c_a434350c0629d48af15132bd626ff0e7b}} 
+\index{game.\+c@{game.\+c}!simonsays@{simonsays}}
+\index{simonsays@{simonsays}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{simonsays()}{simonsays()}}
+{\footnotesize\ttfamily int simonsays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main function that calls the game interruption handlers and the game state machine funtions 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a434350c0629d48af15132bd626ff0e7b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{game_8c_a434350c0629d48af15132bd626ff0e7b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a8101733e49b7935d3b1b8d2bb83dd42f}\label{game_8c_a8101733e49b7935d3b1b8d2bb83dd42f}} 
+\index{game.\+c@{game.\+c}!state\+\_\+machine@{state\+\_\+machine}}
+\index{state\+\_\+machine@{state\+\_\+machine}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{state\+\_\+machine()}{state\_machine()}}
+{\footnotesize\ttfamily void state\+\_\+machine (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})}
+
+
+
+state machine that changes the game state according to the inputs given by the players 
+
+This function is responsible for filling the arrays with the player inputs
+
+This function also changes the state acording to the button pressed on the main menu(\+S\+T\+A\+R\+T O\+R E\+X\+I\+T)
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input given by a player \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{game_8c_a8101733e49b7935d3b1b8d2bb83dd42f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a8101733e49b7935d3b1b8d2bb83dd42f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8c_a0ba54f993c5072ccad6ef0562e36443b}\label{game_8c_a0ba54f993c5072ccad6ef0562e36443b}} 
+\index{game.\+c@{game.\+c}!timer\+\_\+state\+\_\+machine@{timer\+\_\+state\+\_\+machine}}
+\index{timer\+\_\+state\+\_\+machine@{timer\+\_\+state\+\_\+machine}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+state\+\_\+machine()}{timer\_state\_machine()}}
+{\footnotesize\ttfamily int timer\+\_\+state\+\_\+machine (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})}
+
+
+
+state machine that changes the game state according to the inputs given by the players ,makes the time pauses and draws the screen according to the current state 
+
+although it has the same states as the state machine, the timer state machine is also responsible for the time pauses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input given by a player\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if a timeout has started(only returns 1 in the beggining of the timeout, if we are in the middle of the timeout it returns 0), returns zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a0ba54f993c5072ccad6ef0562e36443b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8c_a0ba54f993c5072ccad6ef0562e36443b_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{game_8c_acf78d5ab53d26add4184578b9732a6a0}\label{game_8c_acf78d5ab53d26add4184578b9732a6a0}} 
+\index{game.\+c@{game.\+c}!escape@{escape}}
+\index{escape@{escape}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{escape}{escape}}
+{\footnotesize\ttfamily int escape = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_aed766d1a38b70be51df494da921471fa}\label{game_8c_aed766d1a38b70be51df494da921471fa}} 
+\index{game.\+c@{game.\+c}!game\+\_\+state@{game\+\_\+state}}
+\index{game\+\_\+state@{game\+\_\+state}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+state}{game\_state}}
+{\footnotesize\ttfamily \hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t} game\+\_\+state = \hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414dac22743f1fc74de09544ecc9bab74a17b}{M\+A\+I\+N\+\_\+\+M\+E\+NU}}
+
+\mbox{\Hypertarget{game_8c_a9f96e639d82878ed2a43b4d80b45f626}\label{game_8c_a9f96e639d82878ed2a43b4d80b45f626}} 
+\index{game.\+c@{game.\+c}!game\+\_\+turn@{game\+\_\+turn}}
+\index{game\+\_\+turn@{game\+\_\+turn}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{game\+\_\+turn}{game\_turn}}
+{\footnotesize\ttfamily \hyperlink{gamevariables_8h_a0a4ccc23c2081d8587459bfbe0bbeee4}{game\+\_\+turn\+\_\+t} game\+\_\+turn = \hyperlink{gamevariables_8h_a0a4ccc23c2081d8587459bfbe0bbeee4a77d1b58e26a2a3d61ce38e09764cbc19}{P\+L\+A\+Y\+E\+R1}}
+
+\mbox{\Hypertarget{game_8c_ab2623c3ab961285567b984a662aa0a26}\label{game_8c_ab2623c3ab961285567b984a662aa0a26}} 
+\index{game.\+c@{game.\+c}!mouse\+\_\+x\+\_\+coord@{mouse\+\_\+x\+\_\+coord}}
+\index{mouse\+\_\+x\+\_\+coord@{mouse\+\_\+x\+\_\+coord}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{mouse\+\_\+x\+\_\+coord}{mouse\_x\_coord}}
+{\footnotesize\ttfamily int mouse\+\_\+x\+\_\+coord\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_aadada65942cf173e32057ab132f6be0c}\label{game_8c_aadada65942cf173e32057ab132f6be0c}} 
+\index{game.\+c@{game.\+c}!mouse\+\_\+y\+\_\+coord@{mouse\+\_\+y\+\_\+coord}}
+\index{mouse\+\_\+y\+\_\+coord@{mouse\+\_\+y\+\_\+coord}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{mouse\+\_\+y\+\_\+coord}{mouse\_y\_coord}}
+{\footnotesize\ttfamily int mouse\+\_\+y\+\_\+coord\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a0d7ec96959b5e2328cb30a4a7e7dda10}\label{game_8c_a0d7ec96959b5e2328cb30a4a7e7dda10}} 
+\index{game.\+c@{game.\+c}!player1\+\_\+array@{player1\+\_\+array}}
+\index{player1\+\_\+array@{player1\+\_\+array}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{player1\+\_\+array}{player1\_array}}
+{\footnotesize\ttfamily int player1\+\_\+array\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a08cc02a3fdfc39ca7dce0da405d46872}\label{game_8c_a08cc02a3fdfc39ca7dce0da405d46872}} 
+\index{game.\+c@{game.\+c}!player2\+\_\+array@{player2\+\_\+array}}
+\index{player2\+\_\+array@{player2\+\_\+array}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{player2\+\_\+array}{player2\_array}}
+{\footnotesize\ttfamily int player2\+\_\+array\mbox{[}10\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a312bc2c706f64a3ba78f54cad26d9402}\label{game_8c_a312bc2c706f64a3ba78f54cad26d9402}} 
+\index{game.\+c@{game.\+c}!player2\+\_\+score@{player2\+\_\+score}}
+\index{player2\+\_\+score@{player2\+\_\+score}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{player2\+\_\+score}{player2\_score}}
+{\footnotesize\ttfamily int player2\+\_\+score =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a828d22214652902b5071899608fb1169}\label{game_8c_a828d22214652902b5071899608fb1169}} 
+\index{game.\+c@{game.\+c}!player\+\_\+state@{player\+\_\+state}}
+\index{player\+\_\+state@{player\+\_\+state}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{player\+\_\+state}{player\_state}}
+{\footnotesize\ttfamily \hyperlink{gamevariables_8h_a2282a264f9691d1742756ac5e4929238}{player\+\_\+state\+\_\+t} player\+\_\+state = \hyperlink{gamevariables_8h_a2282a264f9691d1742756ac5e4929238a88ec7d5086d2469ba843c7fcceade8a6}{D\+E\+F\+A\+U\+LT}}
+
+\mbox{\Hypertarget{game_8c_a401e942526aac47cef94f478182486e7}\label{game_8c_a401e942526aac47cef94f478182486e7}} 
+\index{game.\+c@{game.\+c}!position@{position}}
+\index{position@{position}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily int position =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}\label{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}} 
+\index{game.\+c@{game.\+c}!round@{round}}
+\index{round@{round}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{round}{round}}
+{\footnotesize\ttfamily unsigned int round = 1\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a83e57ce9bd59cfa0995c2e2c8589c274}\label{game_8c_a83e57ce9bd59cfa0995c2e2c8589c274}} 
+\index{game.\+c@{game.\+c}!time@{time}}
+\index{time@{time}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily unsigned int time = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a493b57f443cc38b3d3df9c1e584d9d82}\label{game_8c_a493b57f443cc38b3d3df9c1e584d9d82}} 
+\index{game.\+c@{game.\+c}!timeout@{timeout}}
+\index{timeout@{timeout}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{timeout}{timeout}}
+{\footnotesize\ttfamily int timeout =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a50f7ef6ef3124abc70fbd30e6c5f06ce}\label{game_8c_a50f7ef6ef3124abc70fbd30e6c5f06ce}} 
+\index{game.\+c@{game.\+c}!timeout\+\_\+entered@{timeout\+\_\+entered}}
+\index{timeout\+\_\+entered@{timeout\+\_\+entered}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{timeout\+\_\+entered}{timeout\_entered}}
+{\footnotesize\ttfamily int timeout\+\_\+entered =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_a4c5da45addccd0b2a643a6b73c2f3214}\label{game_8c_a4c5da45addccd0b2a643a6b73c2f3214}} 
+\index{game.\+c@{game.\+c}!timeout\+\_\+started@{timeout\+\_\+started}}
+\index{timeout\+\_\+started@{timeout\+\_\+started}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{timeout\+\_\+started}{timeout\_started}}
+{\footnotesize\ttfamily int timeout\+\_\+started =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{game_8c_ab54283a672f4b80136585c9973814206}\label{game_8c_ab54283a672f4b80136585c9973814206}} 
+\index{game.\+c@{game.\+c}!timer\+\_\+counter@{timer\+\_\+counter}}
+\index{timer\+\_\+counter@{timer\+\_\+counter}!game.\+c@{game.\+c}}
+\subsubsection{\texorpdfstring{timer\+\_\+counter}{timer\_counter}}
+{\footnotesize\ttfamily unsigned int timer\+\_\+counter =0\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,5 @@
+<map id="drawBitmap" name="drawBitmap">
+<area shape="rect" id="node2" href="$group__video__gr.html#gae2b9b38f4f97e1c580123c8e9a993353" title="Gives the current video horizontal resolution. " alt="" coords="146,5,267,32"/>
+<area shape="rect" id="node3" href="$group__video__gr.html#ga7ee85b0f333d227380a2c43e5fb8507a" title="Gives the current video vertical resolution. " alt="" coords="146,56,267,83"/>
+<area shape="rect" id="node4" href="$group__video__gr.html#ga0823d182cf2b320e5f344bdc420a02d0" title="Gives the double buffer&#39;s address. " alt="" coords="144,107,269,133"/>
+</map>

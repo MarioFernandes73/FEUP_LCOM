@@ -1,0 +1,8 @@
+<map id="draw_number" name="draw_number">
+<area shape="rect" id="node2" href="$group___bitmap.html#gaa7519d8a181750afa183c3350c5f9598" title="Draws the game board, environment in wich the game will decurr (the gaming board shows the current ro..." alt="" coords="152,5,240,32"/>
+<area shape="rect" id="node7" href="$bitmap_8c.html#afd011e7c56424f96bba293494afa1f2c" title="draw_score" alt="" coords="152,56,240,83"/>
+<area shape="rect" id="node3" href="$game_8h.html#a0ba54f993c5072ccad6ef0562e36443b" title="state machine that changes the game state according to the inputs given by the players ..." alt="" coords="288,31,431,57"/>
+<area shape="rect" id="node4" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="479,31,564,57"/>
+<area shape="rect" id="node5" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="612,31,691,57"/>
+<area shape="rect" id="node6" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="739,31,789,57"/>
+</map>

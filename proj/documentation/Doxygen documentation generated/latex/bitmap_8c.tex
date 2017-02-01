@@ -1,0 +1,96 @@
+\hypertarget{bitmap_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/bitmap.c File Reference}
+\label{bitmap_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/bitmap.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/bitmap.\+c}}
+{\ttfamily \#include \char`\"{}bitmap.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\newline
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}stdio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video\+\_\+gr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gamevariables.\+h\char`\"{}}\newline
+Include dependency graph for bitmap.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bitmap_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2}{load\+Bitmap} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads a bmp image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4}{draw\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bmp, int x, int y, \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment} alignment)
+\begin{DoxyCompactList}\small\item\em Draws an unscaled, unrotated bitmap at the given position. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga08c1d4f4fff81df260d979ea8fc1aa61}{delete\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bmp)
+\begin{DoxyCompactList}\small\item\em Destroys the given bitmap, freeing all resources used by it. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a}{get\+\_\+bitmaps} ()
+\begin{DoxyCompactList}\small\item\em Loads all the bitmaps used by calling load\+Bitmap function. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9}{draw\+\_\+black\+\_\+screen} ()
+\begin{DoxyCompactList}\small\item\em Draws a black screen using the black bar image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3}{draw\+\_\+main\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Draws the main menu, wich gives you two options\+: S\+T\+A\+RT or E\+X\+IT. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaa7519d8a181750afa183c3350c5f9598}{draw\+\_\+board} (int \hyperlink{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}{round})
+\begin{DoxyCompactList}\small\item\em Draws the game board, environment in wich the game will decurr (the gaming board shows the current round). \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaca0d178c01fee283d1e3386b9712736e}{draw\+\_\+player1\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player1\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522}{draw\+\_\+player2\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player2\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{bitmap_8c_a9c8f7086bfab6b8558ab5fdfca5e4e63}{draw\+\_\+successful\+\_\+copy} ()
+\item 
+void \hyperlink{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af}{draw\+\_\+failed\+\_\+copy} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces a failed copy of player1\textquotesingle{}s moves. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabbf5153c909fc82e7734744352e22de9}{draw\+\_\+thanks\+\_\+for\+\_\+playing} ()
+\begin{DoxyCompactList}\small\item\em A draw that says \char`\"{}\+Thank you for playing\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga556f9cfc8664aff3169e9775310a5144}{draw\+\_\+input} (int input)
+\begin{DoxyCompactList}\small\item\em A draws a given input given by a player. an input is a play made by a player (it can be selecting a geometrical figure on the board, preesing a key, or draw a positive slope with the mouse) \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga108608b0f2d804c84a271547036b6ffd}{draw\+\_\+cursor} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws the mouse cursor at a given location. \end{DoxyCompactList}\item 
+void \hyperlink{bitmap_8c_afd011e7c56424f96bba293494afa1f2c}{draw\+\_\+score} (int score)
+\item 
+void \hyperlink{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a}{draw\+\_\+number} (int number, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws a number(0-\/9) at a given location(x,y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{bitmap_8c_afd011e7c56424f96bba293494afa1f2c}\label{bitmap_8c_afd011e7c56424f96bba293494afa1f2c}} 
+\index{bitmap.\+c@{bitmap.\+c}!draw\+\_\+score@{draw\+\_\+score}}
+\index{draw\+\_\+score@{draw\+\_\+score}!bitmap.\+c@{bitmap.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+score()}{draw\_score()}}
+{\footnotesize\ttfamily void draw\+\_\+score (\begin{DoxyParamCaption}\item[{int}]{score }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bitmap_8c_afd011e7c56424f96bba293494afa1f2c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bitmap_8c_afd011e7c56424f96bba293494afa1f2c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{bitmap_8c_a9c8f7086bfab6b8558ab5fdfca5e4e63}\label{bitmap_8c_a9c8f7086bfab6b8558ab5fdfca5e4e63}} 
+\index{bitmap.\+c@{bitmap.\+c}!draw\+\_\+successful\+\_\+copy@{draw\+\_\+successful\+\_\+copy}}
+\index{draw\+\_\+successful\+\_\+copy@{draw\+\_\+successful\+\_\+copy}!bitmap.\+c@{bitmap.\+c}}
+\subsubsection{\texorpdfstring{draw\+\_\+successful\+\_\+copy()}{draw\_successful\_copy()}}
+{\footnotesize\ttfamily void draw\+\_\+successful\+\_\+copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bitmap_8c_a9c8f7086bfab6b8558ab5fdfca5e4e63_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{bitmap_8c_a9c8f7086bfab6b8558ab5fdfca5e4e63_icgraph}
+\end{center}
+\end{figure}

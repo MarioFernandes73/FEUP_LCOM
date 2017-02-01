@@ -1,0 +1,830 @@
+\hypertarget{group___bitmap}{}\section{Bitmap}
+\label{group___bitmap}\index{Bitmap@{Bitmap}}
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_bitmap_file_header}{Bitmap\+File\+Header}
+\item 
+struct \hyperlink{struct_bitmap_info_header}{Bitmap\+Info\+Header}
+\item 
+struct \hyperlink{struct_bitmap}{Bitmap}
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment} \{ \hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a6ec599857e15466988726932dd592305}{A\+L\+I\+G\+N\+\_\+\+L\+E\+FT}, 
+\hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a5624165187e56db612253e608a45b1c6}{A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER}, 
+\hyperlink{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a9c81840e8cad46418b39a8b74a246354}{A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT}
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2}{load\+Bitmap} (const char $\ast$filename)
+\begin{DoxyCompactList}\small\item\em Loads a bmp image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4}{draw\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bitmap, int x, int y, \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment} alignment)
+\begin{DoxyCompactList}\small\item\em Draws an unscaled, unrotated bitmap at the given position. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga08c1d4f4fff81df260d979ea8fc1aa61}{delete\+Bitmap} (\hyperlink{struct_bitmap}{Bitmap} $\ast$bmp)
+\begin{DoxyCompactList}\small\item\em Destroys the given bitmap, freeing all resources used by it. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a}{get\+\_\+bitmaps} ()
+\begin{DoxyCompactList}\small\item\em Loads all the bitmaps used by calling load\+Bitmap function. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9}{draw\+\_\+black\+\_\+screen} ()
+\begin{DoxyCompactList}\small\item\em Draws a black screen using the black bar image. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3}{draw\+\_\+main\+\_\+menu} ()
+\begin{DoxyCompactList}\small\item\em Draws the main menu, wich gives you two options\+: S\+T\+A\+RT or E\+X\+IT. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaa7519d8a181750afa183c3350c5f9598}{draw\+\_\+board} (int \hyperlink{game_8c_a0b7685156d686874cf7a3f95a6b7f3f3}{round})
+\begin{DoxyCompactList}\small\item\em Draws the game board, environment in wich the game will decurr (the gaming board shows the current round). \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gaca0d178c01fee283d1e3386b9712736e}{draw\+\_\+player1\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player1\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522}{draw\+\_\+player2\+\_\+turn} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces player2\textquotesingle{}s turn to play. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gae696a3d4ee82a15e937f5f8c11fa9057}{draw\+\_\+success\+\_\+copy} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces a successful copy of player1\textquotesingle{}s moves. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af}{draw\+\_\+failed\+\_\+copy} ()
+\begin{DoxyCompactList}\small\item\em A draw that announces a failed copy of player1\textquotesingle{}s moves. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_gabbf5153c909fc82e7734744352e22de9}{draw\+\_\+thanks\+\_\+for\+\_\+playing} ()
+\begin{DoxyCompactList}\small\item\em A draw that says \char`\"{}\+Thank you for playing\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga556f9cfc8664aff3169e9775310a5144}{draw\+\_\+input} (int input)
+\begin{DoxyCompactList}\small\item\em A draws a given input given by a player. an input is a play made by a player (it can be selecting a geometrical figure on the board, preesing a key, or draw a positive slope with the mouse) \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga108608b0f2d804c84a271547036b6ffd}{draw\+\_\+cursor} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws the mouse cursor at a given location. \end{DoxyCompactList}\item 
+void \hyperlink{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a}{draw\+\_\+number} (int number, int x, int y)
+\begin{DoxyCompactList}\small\item\em Draws a number(0-\/9) at a given location(x,y) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf1aaa82e6e29c903bb1fda96ce708d27}{bitmap\+\_\+welcome}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga5240b87601f0b5aa3e67976c3ed240ed}{bitmap\+\_\+to}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga7cad4ac90d452221efb12d6156b53b22}{bitmap\+\_\+simonsays}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga87c8ef496268863adc00746941f79f44}{bitmap\+\_\+start}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga952f653fe87f4ca995595e2b7db6228f}{bitmap\+\_\+exit}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf81c286e8b6c034dd42b1e09dfb4c9d9}{bitmap\+\_\+triangle}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gac1d843b74dd56e98adf0c72f75a5a1d8}{bitmap\+\_\+circle}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacf0c500ba60d2cf03c116fe731b21ec9}{bitmap\+\_\+star}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaa6ea6c52c8712671d8ed350cde2f2313}{bitmap\+\_\+square}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga19d13e384604a13b7d8a0839aadd9234}{bitmap\+\_\+vertical\+\_\+white\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4610248f579630fea652a3704556c74c}{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gac6d8af40b0549ee19c8d2d146ac2844f}{bitmap\+\_\+last\+\_\+input}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2f913b78a0f833c9a04aef7f4b334062}{bitmap\+\_\+round}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga993712c0e2465ddf6682e1da844cb33f}{bitmap\+\_\+number\+\_\+0}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gae0e099ab280db078712dae7370590d69}{bitmap\+\_\+number\+\_\+1}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gabff0396d599ff9c20dc45260ac0023e3}{bitmap\+\_\+number\+\_\+2}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga691847399b96e5814e96eaa88d89a565}{bitmap\+\_\+number\+\_\+3}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga0d04224487333eb3e7b5e2f6f84c0c7c}{bitmap\+\_\+number\+\_\+4}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2462605cb4d4dee9006653ffafe12fbc}{bitmap\+\_\+number\+\_\+5}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga70b99f25995d8138d51132de297e66ba}{bitmap\+\_\+number\+\_\+6}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga8c4df34a71fbac148bc9ace8ba6095fa}{bitmap\+\_\+number\+\_\+7}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga0b28cdc22a12665fb94f55d1c9d269f2}{bitmap\+\_\+number\+\_\+8}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga8af434fd1017cdac47579582bac12552}{bitmap\+\_\+number\+\_\+9}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3a3b4fedabcc22d1b0f34e651fcfdb46}{bitmap\+\_\+black\+\_\+square}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga508d397d656733b6434a84217519cf27}{bitmap\+\_\+a\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4f21d75b1561dd84963d37fb8149544b}{bitmap\+\_\+w\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaec5fd5db7147e57f72076387bc78ffc9}{bitmap\+\_\+s\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga3887cbeee8746670c47e70090cc926ae}{bitmap\+\_\+d\+\_\+key}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga25ccce5a865640e111d5c3e6fd8405f5}{bitmap\+\_\+black\+\_\+bar}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga2ba19da7f92ccbe27fd209c98816837a}{bitmap\+\_\+player1}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga63e9b3ca144cce02448900ffe9add6c4}{bitmap\+\_\+player2}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga4eb982d201096abdac3cacd3f6459ff2}{bitmap\+\_\+cpu}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga6fa1dd9e73670e1d22f5b6d258eb0e77}{bitmap\+\_\+turn}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gae897f24816ba9a98f564b2b7ff488bc2}{bitmap\+\_\+cursor}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga1f04a1ac0e8402f5de2230baf1f6818d}{bitmap\+\_\+congratulations}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaf4ba721599394ebe28ce58f495fa1226}{bitmap\+\_\+nice}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga68d193359f4b1253056be87ab752f5f0}{bitmap\+\_\+plagiarism}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga47000f83189d2a2f74f1148050ee338b}{bitmap\+\_\+happy\+\_\+face}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gaaedffcc0ad02fe92aaae449a289619e3}{bitmap\+\_\+ups}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacc8a2c20312c8ec30b84297cbf6df6f2}{bitmap\+\_\+you}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga5d96b14aaf8cbac173f6d809be1ff7d4}{bitmap\+\_\+failed}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga712c5447dd57d83342185a9ac9ca7015}{bitmap\+\_\+sad\+\_\+face}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga227e788aa82989593af33621bfb230bd}{bitmap\+\_\+thanks}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga04b3490379f60798e7a6de171979a90f}{bitmap\+\_\+for}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_ga57060e5b51d9603d9fc393526c965a3b}{bitmap\+\_\+playing}
+\item 
+\hyperlink{struct_bitmap}{Bitmap} $\ast$ \hyperlink{group___bitmap_gacb59d00d1a96d8b830bddde99bc4f7dd}{bitmap\+\_\+final\+\_\+score}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for manipulating bitmaps 
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}\label{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}} 
+\index{Bitmap@{Bitmap}!Alignment@{Alignment}}
+\index{Alignment@{Alignment}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{Alignment}{Alignment}}
+{\footnotesize\ttfamily enum \hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+I\+G\+N\+\_\+\+L\+E\+FT@{A\+L\+I\+G\+N\+\_\+\+L\+E\+FT}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!A\+L\+I\+G\+N\+\_\+\+L\+E\+FT@{A\+L\+I\+G\+N\+\_\+\+L\+E\+FT}}}\mbox{\Hypertarget{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a6ec599857e15466988726932dd592305}\label{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a6ec599857e15466988726932dd592305}} 
+A\+L\+I\+G\+N\+\_\+\+L\+E\+FT&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER@{A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER@{A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER}}}\mbox{\Hypertarget{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a5624165187e56db612253e608a45b1c6}\label{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a5624165187e56db612253e608a45b1c6}} 
+A\+L\+I\+G\+N\+\_\+\+C\+E\+N\+T\+ER&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT@{A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT}!Bitmap@{Bitmap}}\index{Bitmap@{Bitmap}!A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT@{A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT}}}\mbox{\Hypertarget{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a9c81840e8cad46418b39a8b74a246354}\label{group___bitmap_ggacdfaca60ec19c0265bac2692d7982726a9c81840e8cad46418b39a8b74a246354}} 
+A\+L\+I\+G\+N\+\_\+\+R\+I\+G\+HT&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group___bitmap_ga08c1d4f4fff81df260d979ea8fc1aa61}\label{group___bitmap_ga08c1d4f4fff81df260d979ea8fc1aa61}} 
+\index{Bitmap@{Bitmap}!delete\+Bitmap@{delete\+Bitmap}}
+\index{delete\+Bitmap@{delete\+Bitmap}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{delete\+Bitmap()}{deleteBitmap()}}
+{\footnotesize\ttfamily void delete\+Bitmap (\begin{DoxyParamCaption}\item[{\hyperlink{struct_bitmap}{Bitmap} $\ast$}]{bmp }\end{DoxyParamCaption})}
+
+
+
+Destroys the given bitmap, freeing all resources used by it. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bitmap} & bitmap to be destroyed \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9}\label{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+black\+\_\+screen@{draw\+\_\+black\+\_\+screen}}
+\index{draw\+\_\+black\+\_\+screen@{draw\+\_\+black\+\_\+screen}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+black\+\_\+screen()}{draw\_black\_screen()}}
+{\footnotesize\ttfamily void draw\+\_\+black\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws a black screen using the black bar image. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga66c6cdf9473527bd3dcbab53d147d5b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_gaa7519d8a181750afa183c3350c5f9598}\label{group___bitmap_gaa7519d8a181750afa183c3350c5f9598}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+board@{draw\+\_\+board}}
+\index{draw\+\_\+board@{draw\+\_\+board}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+board()}{draw\_board()}}
+{\footnotesize\ttfamily void draw\+\_\+board (\begin{DoxyParamCaption}\item[{int}]{round }\end{DoxyParamCaption})}
+
+
+
+Draws the game board, environment in wich the game will decurr (the gaming board shows the current round). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em round} & current game round \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gaa7519d8a181750afa183c3350c5f9598_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gaa7519d8a181750afa183c3350c5f9598_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga108608b0f2d804c84a271547036b6ffd}\label{group___bitmap_ga108608b0f2d804c84a271547036b6ffd}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+cursor@{draw\+\_\+cursor}}
+\index{draw\+\_\+cursor@{draw\+\_\+cursor}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+cursor()}{draw\_cursor()}}
+{\footnotesize\ttfamily void draw\+\_\+cursor (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws the mouse cursor at a given location. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x coordinate of the location where the mouse cursor will be drawn \\
+\hline
+{\em y} & y coordinate of the location where the mouse cursor will be drawn \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga108608b0f2d804c84a271547036b6ffd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga108608b0f2d804c84a271547036b6ffd_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af}\label{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+failed\+\_\+copy@{draw\+\_\+failed\+\_\+copy}}
+\index{draw\+\_\+failed\+\_\+copy@{draw\+\_\+failed\+\_\+copy}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+failed\+\_\+copy()}{draw\_failed\_copy()}}
+{\footnotesize\ttfamily void draw\+\_\+failed\+\_\+copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A draw that announces a failed copy of player1\textquotesingle{}s moves. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga06ba1c351da1ccdfa323137861c1a9af_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga556f9cfc8664aff3169e9775310a5144}\label{group___bitmap_ga556f9cfc8664aff3169e9775310a5144}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+input@{draw\+\_\+input}}
+\index{draw\+\_\+input@{draw\+\_\+input}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+input()}{draw\_input()}}
+{\footnotesize\ttfamily void draw\+\_\+input (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})}
+
+
+
+A draws a given input given by a player. an input is a play made by a player (it can be selecting a geometrical figure on the board, preesing a key, or draw a positive slope with the mouse) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & play made by a player \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga556f9cfc8664aff3169e9775310a5144_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga556f9cfc8664aff3169e9775310a5144_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3}\label{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+main\+\_\+menu@{draw\+\_\+main\+\_\+menu}}
+\index{draw\+\_\+main\+\_\+menu@{draw\+\_\+main\+\_\+menu}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+main\+\_\+menu()}{draw\_main\_menu()}}
+{\footnotesize\ttfamily void draw\+\_\+main\+\_\+menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draws the main menu, wich gives you two options\+: S\+T\+A\+RT or E\+X\+IT. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga83361e027b6f0dd917305f1f82dedda3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a}\label{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+number@{draw\+\_\+number}}
+\index{draw\+\_\+number@{draw\+\_\+number}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+number()}{draw\_number()}}
+{\footnotesize\ttfamily void draw\+\_\+number (\begin{DoxyParamCaption}\item[{int}]{number,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Draws a number(0-\/9) at a given location(x,y) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em number} & number to be drawn \\
+\hline
+{\em x} & x coordinate where the number will be drawn \\
+\hline
+{\em y} & y coordinate where the number will be drawn \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga97df0f6e4184d84c9e3871042b94bc3a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_gaca0d178c01fee283d1e3386b9712736e}\label{group___bitmap_gaca0d178c01fee283d1e3386b9712736e}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+player1\+\_\+turn@{draw\+\_\+player1\+\_\+turn}}
+\index{draw\+\_\+player1\+\_\+turn@{draw\+\_\+player1\+\_\+turn}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+player1\+\_\+turn()}{draw\_player1\_turn()}}
+{\footnotesize\ttfamily void draw\+\_\+player1\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A draw that announces player1\textquotesingle{}s turn to play. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gaca0d178c01fee283d1e3386b9712736e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gaca0d178c01fee283d1e3386b9712736e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522}\label{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+player2\+\_\+turn@{draw\+\_\+player2\+\_\+turn}}
+\index{draw\+\_\+player2\+\_\+turn@{draw\+\_\+player2\+\_\+turn}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+player2\+\_\+turn()}{draw\_player2\_turn()}}
+{\footnotesize\ttfamily void draw\+\_\+player2\+\_\+turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A draw that announces player2\textquotesingle{}s turn to play. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga9af400ed66deb4c3aff712d9a7e9f522_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_gae696a3d4ee82a15e937f5f8c11fa9057}\label{group___bitmap_gae696a3d4ee82a15e937f5f8c11fa9057}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+success\+\_\+copy@{draw\+\_\+success\+\_\+copy}}
+\index{draw\+\_\+success\+\_\+copy@{draw\+\_\+success\+\_\+copy}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+success\+\_\+copy()}{draw\_success\_copy()}}
+{\footnotesize\ttfamily void draw\+\_\+success\+\_\+copy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A draw that announces a successful copy of player1\textquotesingle{}s moves. 
+
+\mbox{\Hypertarget{group___bitmap_gabbf5153c909fc82e7734744352e22de9}\label{group___bitmap_gabbf5153c909fc82e7734744352e22de9}} 
+\index{Bitmap@{Bitmap}!draw\+\_\+thanks\+\_\+for\+\_\+playing@{draw\+\_\+thanks\+\_\+for\+\_\+playing}}
+\index{draw\+\_\+thanks\+\_\+for\+\_\+playing@{draw\+\_\+thanks\+\_\+for\+\_\+playing}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+\_\+thanks\+\_\+for\+\_\+playing()}{draw\_thanks\_for\_playing()}}
+{\footnotesize\ttfamily void draw\+\_\+thanks\+\_\+for\+\_\+playing (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A draw that says \char`\"{}\+Thank you for playing\char`\"{}. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gabbf5153c909fc82e7734744352e22de9_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gabbf5153c909fc82e7734744352e22de9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4}\label{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4}} 
+\index{Bitmap@{Bitmap}!draw\+Bitmap@{draw\+Bitmap}}
+\index{draw\+Bitmap@{draw\+Bitmap}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{draw\+Bitmap()}{drawBitmap()}}
+{\footnotesize\ttfamily void draw\+Bitmap (\begin{DoxyParamCaption}\item[{\hyperlink{struct_bitmap}{Bitmap} $\ast$}]{bitmap,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{\hyperlink{group___bitmap_gacdfaca60ec19c0265bac2692d7982726}{Alignment}}]{alignment }\end{DoxyParamCaption})}
+
+
+
+Draws an unscaled, unrotated bitmap at the given position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bitmap} & bitmap to be drawn \\
+\hline
+{\em x} & destiny x coord \\
+\hline
+{\em y} & destiny y coord \\
+\hline
+{\em alignment} & image alignment \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga18d05a1c671f4638bc63d37874efb9d4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a}\label{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a}} 
+\index{Bitmap@{Bitmap}!get\+\_\+bitmaps@{get\+\_\+bitmaps}}
+\index{get\+\_\+bitmaps@{get\+\_\+bitmaps}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{get\+\_\+bitmaps()}{get\_bitmaps()}}
+{\footnotesize\ttfamily void get\+\_\+bitmaps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Loads all the bitmaps used by calling load\+Bitmap function. 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=251pt]{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_gabda6654c65348aa9c06a9ae0e9562b9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2}\label{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2}} 
+\index{Bitmap@{Bitmap}!load\+Bitmap@{load\+Bitmap}}
+\index{load\+Bitmap@{load\+Bitmap}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{load\+Bitmap()}{loadBitmap()}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ load\+Bitmap (\begin{DoxyParamCaption}\item[{const char $\ast$}]{filename }\end{DoxyParamCaption})}
+
+
+
+Loads a bmp image. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path of the image to load \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Non N\+U\+LL pointer to the image buffer 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group___bitmap_ga3506880ffd407c36eb8aaddd2c1606d2_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{group___bitmap_ga508d397d656733b6434a84217519cf27}\label{group___bitmap_ga508d397d656733b6434a84217519cf27}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+a\+\_\+key@{bitmap\+\_\+a\+\_\+key}}
+\index{bitmap\+\_\+a\+\_\+key@{bitmap\+\_\+a\+\_\+key}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+a\+\_\+key}{bitmap\_a\_key}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+a\+\_\+key}
+
+\mbox{\Hypertarget{group___bitmap_ga25ccce5a865640e111d5c3e6fd8405f5}\label{group___bitmap_ga25ccce5a865640e111d5c3e6fd8405f5}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+black\+\_\+bar@{bitmap\+\_\+black\+\_\+bar}}
+\index{bitmap\+\_\+black\+\_\+bar@{bitmap\+\_\+black\+\_\+bar}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+black\+\_\+bar}{bitmap\_black\_bar}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+black\+\_\+bar}
+
+\mbox{\Hypertarget{group___bitmap_ga3a3b4fedabcc22d1b0f34e651fcfdb46}\label{group___bitmap_ga3a3b4fedabcc22d1b0f34e651fcfdb46}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+black\+\_\+square@{bitmap\+\_\+black\+\_\+square}}
+\index{bitmap\+\_\+black\+\_\+square@{bitmap\+\_\+black\+\_\+square}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+black\+\_\+square}{bitmap\_black\_square}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+black\+\_\+square}
+
+\mbox{\Hypertarget{group___bitmap_gac1d843b74dd56e98adf0c72f75a5a1d8}\label{group___bitmap_gac1d843b74dd56e98adf0c72f75a5a1d8}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+circle@{bitmap\+\_\+circle}}
+\index{bitmap\+\_\+circle@{bitmap\+\_\+circle}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+circle}{bitmap\_circle}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+circle}
+
+\mbox{\Hypertarget{group___bitmap_ga1f04a1ac0e8402f5de2230baf1f6818d}\label{group___bitmap_ga1f04a1ac0e8402f5de2230baf1f6818d}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+congratulations@{bitmap\+\_\+congratulations}}
+\index{bitmap\+\_\+congratulations@{bitmap\+\_\+congratulations}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+congratulations}{bitmap\_congratulations}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+congratulations}
+
+\mbox{\Hypertarget{group___bitmap_ga4eb982d201096abdac3cacd3f6459ff2}\label{group___bitmap_ga4eb982d201096abdac3cacd3f6459ff2}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+cpu@{bitmap\+\_\+cpu}}
+\index{bitmap\+\_\+cpu@{bitmap\+\_\+cpu}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+cpu}{bitmap\_cpu}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+cpu}
+
+\mbox{\Hypertarget{group___bitmap_gae897f24816ba9a98f564b2b7ff488bc2}\label{group___bitmap_gae897f24816ba9a98f564b2b7ff488bc2}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+cursor@{bitmap\+\_\+cursor}}
+\index{bitmap\+\_\+cursor@{bitmap\+\_\+cursor}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+cursor}{bitmap\_cursor}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+cursor}
+
+\mbox{\Hypertarget{group___bitmap_ga3887cbeee8746670c47e70090cc926ae}\label{group___bitmap_ga3887cbeee8746670c47e70090cc926ae}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+d\+\_\+key@{bitmap\+\_\+d\+\_\+key}}
+\index{bitmap\+\_\+d\+\_\+key@{bitmap\+\_\+d\+\_\+key}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+d\+\_\+key}{bitmap\_d\_key}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+d\+\_\+key}
+
+\mbox{\Hypertarget{group___bitmap_ga952f653fe87f4ca995595e2b7db6228f}\label{group___bitmap_ga952f653fe87f4ca995595e2b7db6228f}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+exit@{bitmap\+\_\+exit}}
+\index{bitmap\+\_\+exit@{bitmap\+\_\+exit}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+exit}{bitmap\_exit}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+exit}
+
+\mbox{\Hypertarget{group___bitmap_ga5d96b14aaf8cbac173f6d809be1ff7d4}\label{group___bitmap_ga5d96b14aaf8cbac173f6d809be1ff7d4}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+failed@{bitmap\+\_\+failed}}
+\index{bitmap\+\_\+failed@{bitmap\+\_\+failed}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+failed}{bitmap\_failed}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+failed}
+
+\mbox{\Hypertarget{group___bitmap_gacb59d00d1a96d8b830bddde99bc4f7dd}\label{group___bitmap_gacb59d00d1a96d8b830bddde99bc4f7dd}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+final\+\_\+score@{bitmap\+\_\+final\+\_\+score}}
+\index{bitmap\+\_\+final\+\_\+score@{bitmap\+\_\+final\+\_\+score}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+final\+\_\+score}{bitmap\_final\_score}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+final\+\_\+score}
+
+\mbox{\Hypertarget{group___bitmap_ga04b3490379f60798e7a6de171979a90f}\label{group___bitmap_ga04b3490379f60798e7a6de171979a90f}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+for@{bitmap\+\_\+for}}
+\index{bitmap\+\_\+for@{bitmap\+\_\+for}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+for}{bitmap\_for}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+for}
+
+\mbox{\Hypertarget{group___bitmap_ga47000f83189d2a2f74f1148050ee338b}\label{group___bitmap_ga47000f83189d2a2f74f1148050ee338b}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+happy\+\_\+face@{bitmap\+\_\+happy\+\_\+face}}
+\index{bitmap\+\_\+happy\+\_\+face@{bitmap\+\_\+happy\+\_\+face}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+happy\+\_\+face}{bitmap\_happy\_face}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+happy\+\_\+face}
+
+\mbox{\Hypertarget{group___bitmap_ga4610248f579630fea652a3704556c74c}\label{group___bitmap_ga4610248f579630fea652a3704556c74c}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+horizontal\+\_\+white\+\_\+bar@{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}}
+\index{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar@{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}{bitmap\_horizontal\_white\_bar}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+horizontal\+\_\+white\+\_\+bar}
+
+\mbox{\Hypertarget{group___bitmap_gac6d8af40b0549ee19c8d2d146ac2844f}\label{group___bitmap_gac6d8af40b0549ee19c8d2d146ac2844f}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+last\+\_\+input@{bitmap\+\_\+last\+\_\+input}}
+\index{bitmap\+\_\+last\+\_\+input@{bitmap\+\_\+last\+\_\+input}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+last\+\_\+input}{bitmap\_last\_input}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+last\+\_\+input}
+
+\mbox{\Hypertarget{group___bitmap_gaf4ba721599394ebe28ce58f495fa1226}\label{group___bitmap_gaf4ba721599394ebe28ce58f495fa1226}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+nice@{bitmap\+\_\+nice}}
+\index{bitmap\+\_\+nice@{bitmap\+\_\+nice}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+nice}{bitmap\_nice}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+nice}
+
+\mbox{\Hypertarget{group___bitmap_ga993712c0e2465ddf6682e1da844cb33f}\label{group___bitmap_ga993712c0e2465ddf6682e1da844cb33f}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+0@{bitmap\+\_\+number\+\_\+0}}
+\index{bitmap\+\_\+number\+\_\+0@{bitmap\+\_\+number\+\_\+0}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+0}{bitmap\_number\_0}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+0}
+
+\mbox{\Hypertarget{group___bitmap_gae0e099ab280db078712dae7370590d69}\label{group___bitmap_gae0e099ab280db078712dae7370590d69}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+1@{bitmap\+\_\+number\+\_\+1}}
+\index{bitmap\+\_\+number\+\_\+1@{bitmap\+\_\+number\+\_\+1}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+1}{bitmap\_number\_1}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+1}
+
+\mbox{\Hypertarget{group___bitmap_gabff0396d599ff9c20dc45260ac0023e3}\label{group___bitmap_gabff0396d599ff9c20dc45260ac0023e3}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+2@{bitmap\+\_\+number\+\_\+2}}
+\index{bitmap\+\_\+number\+\_\+2@{bitmap\+\_\+number\+\_\+2}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+2}{bitmap\_number\_2}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+2}
+
+\mbox{\Hypertarget{group___bitmap_ga691847399b96e5814e96eaa88d89a565}\label{group___bitmap_ga691847399b96e5814e96eaa88d89a565}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+3@{bitmap\+\_\+number\+\_\+3}}
+\index{bitmap\+\_\+number\+\_\+3@{bitmap\+\_\+number\+\_\+3}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+3}{bitmap\_number\_3}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+3}
+
+\mbox{\Hypertarget{group___bitmap_ga0d04224487333eb3e7b5e2f6f84c0c7c}\label{group___bitmap_ga0d04224487333eb3e7b5e2f6f84c0c7c}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+4@{bitmap\+\_\+number\+\_\+4}}
+\index{bitmap\+\_\+number\+\_\+4@{bitmap\+\_\+number\+\_\+4}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+4}{bitmap\_number\_4}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+4}
+
+\mbox{\Hypertarget{group___bitmap_ga2462605cb4d4dee9006653ffafe12fbc}\label{group___bitmap_ga2462605cb4d4dee9006653ffafe12fbc}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+5@{bitmap\+\_\+number\+\_\+5}}
+\index{bitmap\+\_\+number\+\_\+5@{bitmap\+\_\+number\+\_\+5}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+5}{bitmap\_number\_5}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+5}
+
+\mbox{\Hypertarget{group___bitmap_ga70b99f25995d8138d51132de297e66ba}\label{group___bitmap_ga70b99f25995d8138d51132de297e66ba}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+6@{bitmap\+\_\+number\+\_\+6}}
+\index{bitmap\+\_\+number\+\_\+6@{bitmap\+\_\+number\+\_\+6}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+6}{bitmap\_number\_6}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+6}
+
+\mbox{\Hypertarget{group___bitmap_ga8c4df34a71fbac148bc9ace8ba6095fa}\label{group___bitmap_ga8c4df34a71fbac148bc9ace8ba6095fa}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+7@{bitmap\+\_\+number\+\_\+7}}
+\index{bitmap\+\_\+number\+\_\+7@{bitmap\+\_\+number\+\_\+7}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+7}{bitmap\_number\_7}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+7}
+
+\mbox{\Hypertarget{group___bitmap_ga0b28cdc22a12665fb94f55d1c9d269f2}\label{group___bitmap_ga0b28cdc22a12665fb94f55d1c9d269f2}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+8@{bitmap\+\_\+number\+\_\+8}}
+\index{bitmap\+\_\+number\+\_\+8@{bitmap\+\_\+number\+\_\+8}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+8}{bitmap\_number\_8}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+8}
+
+\mbox{\Hypertarget{group___bitmap_ga8af434fd1017cdac47579582bac12552}\label{group___bitmap_ga8af434fd1017cdac47579582bac12552}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+number\+\_\+9@{bitmap\+\_\+number\+\_\+9}}
+\index{bitmap\+\_\+number\+\_\+9@{bitmap\+\_\+number\+\_\+9}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+number\+\_\+9}{bitmap\_number\_9}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+number\+\_\+9}
+
+\mbox{\Hypertarget{group___bitmap_ga68d193359f4b1253056be87ab752f5f0}\label{group___bitmap_ga68d193359f4b1253056be87ab752f5f0}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+plagiarism@{bitmap\+\_\+plagiarism}}
+\index{bitmap\+\_\+plagiarism@{bitmap\+\_\+plagiarism}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+plagiarism}{bitmap\_plagiarism}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+plagiarism}
+
+\mbox{\Hypertarget{group___bitmap_ga2ba19da7f92ccbe27fd209c98816837a}\label{group___bitmap_ga2ba19da7f92ccbe27fd209c98816837a}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+player1@{bitmap\+\_\+player1}}
+\index{bitmap\+\_\+player1@{bitmap\+\_\+player1}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+player1}{bitmap\_player1}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+player1}
+
+\mbox{\Hypertarget{group___bitmap_ga63e9b3ca144cce02448900ffe9add6c4}\label{group___bitmap_ga63e9b3ca144cce02448900ffe9add6c4}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+player2@{bitmap\+\_\+player2}}
+\index{bitmap\+\_\+player2@{bitmap\+\_\+player2}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+player2}{bitmap\_player2}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+player2}
+
+\mbox{\Hypertarget{group___bitmap_ga57060e5b51d9603d9fc393526c965a3b}\label{group___bitmap_ga57060e5b51d9603d9fc393526c965a3b}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+playing@{bitmap\+\_\+playing}}
+\index{bitmap\+\_\+playing@{bitmap\+\_\+playing}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+playing}{bitmap\_playing}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+playing}
+
+\mbox{\Hypertarget{group___bitmap_ga2f913b78a0f833c9a04aef7f4b334062}\label{group___bitmap_ga2f913b78a0f833c9a04aef7f4b334062}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+round@{bitmap\+\_\+round}}
+\index{bitmap\+\_\+round@{bitmap\+\_\+round}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+round}{bitmap\_round}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+round}
+
+\mbox{\Hypertarget{group___bitmap_gaec5fd5db7147e57f72076387bc78ffc9}\label{group___bitmap_gaec5fd5db7147e57f72076387bc78ffc9}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+s\+\_\+key@{bitmap\+\_\+s\+\_\+key}}
+\index{bitmap\+\_\+s\+\_\+key@{bitmap\+\_\+s\+\_\+key}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+s\+\_\+key}{bitmap\_s\_key}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+s\+\_\+key}
+
+\mbox{\Hypertarget{group___bitmap_ga712c5447dd57d83342185a9ac9ca7015}\label{group___bitmap_ga712c5447dd57d83342185a9ac9ca7015}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+sad\+\_\+face@{bitmap\+\_\+sad\+\_\+face}}
+\index{bitmap\+\_\+sad\+\_\+face@{bitmap\+\_\+sad\+\_\+face}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+sad\+\_\+face}{bitmap\_sad\_face}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+sad\+\_\+face}
+
+\mbox{\Hypertarget{group___bitmap_ga7cad4ac90d452221efb12d6156b53b22}\label{group___bitmap_ga7cad4ac90d452221efb12d6156b53b22}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+simonsays@{bitmap\+\_\+simonsays}}
+\index{bitmap\+\_\+simonsays@{bitmap\+\_\+simonsays}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+simonsays}{bitmap\_simonsays}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+simonsays}
+
+\mbox{\Hypertarget{group___bitmap_gaa6ea6c52c8712671d8ed350cde2f2313}\label{group___bitmap_gaa6ea6c52c8712671d8ed350cde2f2313}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+square@{bitmap\+\_\+square}}
+\index{bitmap\+\_\+square@{bitmap\+\_\+square}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+square}{bitmap\_square}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+square}
+
+\mbox{\Hypertarget{group___bitmap_gacf0c500ba60d2cf03c116fe731b21ec9}\label{group___bitmap_gacf0c500ba60d2cf03c116fe731b21ec9}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+star@{bitmap\+\_\+star}}
+\index{bitmap\+\_\+star@{bitmap\+\_\+star}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+star}{bitmap\_star}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+star}
+
+\mbox{\Hypertarget{group___bitmap_ga87c8ef496268863adc00746941f79f44}\label{group___bitmap_ga87c8ef496268863adc00746941f79f44}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+start@{bitmap\+\_\+start}}
+\index{bitmap\+\_\+start@{bitmap\+\_\+start}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+start}{bitmap\_start}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+start}
+
+\mbox{\Hypertarget{group___bitmap_ga227e788aa82989593af33621bfb230bd}\label{group___bitmap_ga227e788aa82989593af33621bfb230bd}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+thanks@{bitmap\+\_\+thanks}}
+\index{bitmap\+\_\+thanks@{bitmap\+\_\+thanks}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+thanks}{bitmap\_thanks}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+thanks}
+
+\mbox{\Hypertarget{group___bitmap_ga5240b87601f0b5aa3e67976c3ed240ed}\label{group___bitmap_ga5240b87601f0b5aa3e67976c3ed240ed}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+to@{bitmap\+\_\+to}}
+\index{bitmap\+\_\+to@{bitmap\+\_\+to}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+to}{bitmap\_to}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+to}
+
+\mbox{\Hypertarget{group___bitmap_gaf81c286e8b6c034dd42b1e09dfb4c9d9}\label{group___bitmap_gaf81c286e8b6c034dd42b1e09dfb4c9d9}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+triangle@{bitmap\+\_\+triangle}}
+\index{bitmap\+\_\+triangle@{bitmap\+\_\+triangle}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+triangle}{bitmap\_triangle}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+triangle}
+
+\mbox{\Hypertarget{group___bitmap_ga6fa1dd9e73670e1d22f5b6d258eb0e77}\label{group___bitmap_ga6fa1dd9e73670e1d22f5b6d258eb0e77}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+turn@{bitmap\+\_\+turn}}
+\index{bitmap\+\_\+turn@{bitmap\+\_\+turn}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+turn}{bitmap\_turn}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+turn}
+
+\mbox{\Hypertarget{group___bitmap_gaaedffcc0ad02fe92aaae449a289619e3}\label{group___bitmap_gaaedffcc0ad02fe92aaae449a289619e3}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+ups@{bitmap\+\_\+ups}}
+\index{bitmap\+\_\+ups@{bitmap\+\_\+ups}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+ups}{bitmap\_ups}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+ups}
+
+\mbox{\Hypertarget{group___bitmap_ga19d13e384604a13b7d8a0839aadd9234}\label{group___bitmap_ga19d13e384604a13b7d8a0839aadd9234}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+vertical\+\_\+white\+\_\+bar@{bitmap\+\_\+vertical\+\_\+white\+\_\+bar}}
+\index{bitmap\+\_\+vertical\+\_\+white\+\_\+bar@{bitmap\+\_\+vertical\+\_\+white\+\_\+bar}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+vertical\+\_\+white\+\_\+bar}{bitmap\_vertical\_white\_bar}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+vertical\+\_\+white\+\_\+bar}
+
+\mbox{\Hypertarget{group___bitmap_ga4f21d75b1561dd84963d37fb8149544b}\label{group___bitmap_ga4f21d75b1561dd84963d37fb8149544b}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+w\+\_\+key@{bitmap\+\_\+w\+\_\+key}}
+\index{bitmap\+\_\+w\+\_\+key@{bitmap\+\_\+w\+\_\+key}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+w\+\_\+key}{bitmap\_w\_key}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+w\+\_\+key}
+
+\mbox{\Hypertarget{group___bitmap_gaf1aaa82e6e29c903bb1fda96ce708d27}\label{group___bitmap_gaf1aaa82e6e29c903bb1fda96ce708d27}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+welcome@{bitmap\+\_\+welcome}}
+\index{bitmap\+\_\+welcome@{bitmap\+\_\+welcome}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+welcome}{bitmap\_welcome}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+welcome}
+
+\mbox{\Hypertarget{group___bitmap_gacc8a2c20312c8ec30b84297cbf6df6f2}\label{group___bitmap_gacc8a2c20312c8ec30b84297cbf6df6f2}} 
+\index{Bitmap@{Bitmap}!bitmap\+\_\+you@{bitmap\+\_\+you}}
+\index{bitmap\+\_\+you@{bitmap\+\_\+you}!Bitmap@{Bitmap}}
+\subsubsection{\texorpdfstring{bitmap\+\_\+you}{bitmap\_you}}
+{\footnotesize\ttfamily \hyperlink{struct_bitmap}{Bitmap}$\ast$ bitmap\+\_\+you}
+

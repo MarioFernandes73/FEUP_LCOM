@@ -1,0 +1,61 @@
+\hypertarget{kbc_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/kbc.c File Reference}
+\label{kbc_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/kbc.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/kbc.\+c}}
+{\ttfamily \#include \char`\"{}kbc.\+h\char`\"{}}\newline
+Include dependency graph for kbc.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{kbc_8c_a553a3e42899ae0907eed9a576ab77939}{read\+\_\+status\+\_\+to\+\_\+read} ()
+\begin{DoxyCompactList}\small\item\em Reads the K\+BC status byte and checks if the output buffer is full so that we read from it. \end{DoxyCompactList}\item 
+int \hyperlink{kbc_8c_a6a718d99ee741349a4e9f0af76ddce00}{read\+\_\+status\+\_\+to\+\_\+write} ()
+\begin{DoxyCompactList}\small\item\em Reads the K\+BC status byte and checks if the input buffer is empty so that we write to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{kbc_8c_a553a3e42899ae0907eed9a576ab77939}\label{kbc_8c_a553a3e42899ae0907eed9a576ab77939}} 
+\index{kbc.\+c@{kbc.\+c}!read\+\_\+status\+\_\+to\+\_\+read@{read\+\_\+status\+\_\+to\+\_\+read}}
+\index{read\+\_\+status\+\_\+to\+\_\+read@{read\+\_\+status\+\_\+to\+\_\+read}!kbc.\+c@{kbc.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+status\+\_\+to\+\_\+read()}{read\_status\_to\_read()}}
+{\footnotesize\ttfamily int read\+\_\+status\+\_\+to\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the K\+BC status byte and checks if the output buffer is full so that we read from it. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a553a3e42899ae0907eed9a576ab77939_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbc_8c_a6a718d99ee741349a4e9f0af76ddce00}\label{kbc_8c_a6a718d99ee741349a4e9f0af76ddce00}} 
+\index{kbc.\+c@{kbc.\+c}!read\+\_\+status\+\_\+to\+\_\+write@{read\+\_\+status\+\_\+to\+\_\+write}}
+\index{read\+\_\+status\+\_\+to\+\_\+write@{read\+\_\+status\+\_\+to\+\_\+write}!kbc.\+c@{kbc.\+c}}
+\subsubsection{\texorpdfstring{read\+\_\+status\+\_\+to\+\_\+write()}{read\_status\_to\_write()}}
+{\footnotesize\ttfamily int read\+\_\+status\+\_\+to\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the K\+BC status byte and checks if the input buffer is empty so that we write to it. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8c_a6a718d99ee741349a4e9f0af76ddce00_icgraph}
+\end{center}
+\end{figure}

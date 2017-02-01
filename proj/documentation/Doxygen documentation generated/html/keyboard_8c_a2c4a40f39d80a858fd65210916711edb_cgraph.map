@@ -1,0 +1,3 @@
+<map id="KBD_handler" name="KBD_handler">
+<area shape="rect" id="node2" href="$kbc_8c.html#a553a3e42899ae0907eed9a576ab77939" title="Reads the KBC status byte and checks if the output buffer is full so that we read from it..." alt="" coords="152,5,292,32"/>
+</map>

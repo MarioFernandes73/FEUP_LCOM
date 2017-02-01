@@ -1,0 +1,4 @@
+<map id="vg_init" name="vg_init">
+<area shape="rect" id="node2" href="$group__video__gr.html#ga06d4b54021d33d2447a61b9de3982810" title="maps the VRAM address " alt="" coords="112,5,204,32"/>
+<area shape="rect" id="node3" href="$group__vbe.html#ga4ef3234e41f2050bc094a22049b69e45" title="Returns information on the input VBE mode, including screen dimensions, color depth and VRAM physical..." alt="" coords="252,5,384,32"/>
+</map>

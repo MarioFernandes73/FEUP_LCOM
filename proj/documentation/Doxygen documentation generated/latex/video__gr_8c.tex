@@ -1,0 +1,118 @@
+\hypertarget{video__gr_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/video\+\_\+gr.c File Reference}
+\label{video__gr_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/video\+\_\+gr.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/video\+\_\+gr.\+c}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\newline
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\newline
+{\ttfamily \#include $<$machine/int86.\+h$>$}\newline
+{\ttfamily \#include $<$sys/mman.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video\+\_\+gr.\+h\char`\"{}}\newline
+Include dependency graph for video\+\_\+gr.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{video__gr_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{video__gr_8c_ac854e8352d97c69bdfe247573593ba3b}{V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR}~0x\+E0000000
+\item 
+\#define \hyperlink{video__gr_8c_abf6f66114c31b8f87c80534ca695a00b}{H\+\_\+\+R\+ES}~1024
+\item 
+\#define \hyperlink{video__gr_8c_aac2466862bcfc18231c38fe1eacc22e3}{V\+\_\+\+R\+ES}~768
+\item 
+\#define \hyperlink{video__gr_8c_a35faf89171af20cd21088c37d62bb7ee}{B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__video__gr_ga06d4b54021d33d2447a61b9de3982810}{map\+\_\+\+V\+R\+AM} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em maps the V\+R\+AM address \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__video__gr_gacef21667c79365d57a084bed994c2189}{vg\+\_\+init} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em Initializes the video module in graphics mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}{vg\+\_\+exit} ()
+\begin{DoxyCompactList}\small\item\em Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) \end{DoxyCompactList}\item 
+unsigned \hyperlink{group__video__gr_gae2b9b38f4f97e1c580123c8e9a993353}{get\+Hor\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em Gives the current video horizontal resolution. \end{DoxyCompactList}\item 
+unsigned \hyperlink{group__video__gr_ga7ee85b0f333d227380a2c43e5fb8507a}{get\+Ver\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em Gives the current video vertical resolution. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__video__gr_ga0823d182cf2b320e5f344bdc420a02d0}{get\+Graphics\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Gives the double buffer\textquotesingle{}s address. \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_gad42c7cf5f54fed0714fcf1f6e5e35bee}{swap\+\_\+buffer} ()
+\begin{DoxyCompactList}\small\item\em Sends the double buffer content to the V\+R\+AM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static char $\ast$ \hyperlink{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}{video\+\_\+mem}
+\item 
+static char $\ast$ \hyperlink{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}{double\+\_\+buffer}
+\item 
+static unsigned \hyperlink{video__gr_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}{h\+\_\+res}
+\item 
+static unsigned \hyperlink{video__gr_8c_a5bda1b499253a8fbf3cab646f8760391}{v\+\_\+res}
+\item 
+static unsigned \hyperlink{video__gr_8c_a89fa3fb58e975d148fcb2413e24b78a1}{bits\+\_\+per\+\_\+pixel}
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{video__gr_8c_a35faf89171af20cd21088c37d62bb7ee}\label{video__gr_8c_a35faf89171af20cd21088c37d62bb7ee}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL@{B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL}}
+\index{B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL@{B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL}{BITS\_PER\_PIXEL}}
+{\footnotesize\ttfamily \#define B\+I\+T\+S\+\_\+\+P\+E\+R\+\_\+\+P\+I\+X\+EL~8}
+
+\mbox{\Hypertarget{video__gr_8c_abf6f66114c31b8f87c80534ca695a00b}\label{video__gr_8c_abf6f66114c31b8f87c80534ca695a00b}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!H\+\_\+\+R\+ES@{H\+\_\+\+R\+ES}}
+\index{H\+\_\+\+R\+ES@{H\+\_\+\+R\+ES}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{H\+\_\+\+R\+ES}{H\_RES}}
+{\footnotesize\ttfamily \#define H\+\_\+\+R\+ES~1024}
+
+\mbox{\Hypertarget{video__gr_8c_aac2466862bcfc18231c38fe1eacc22e3}\label{video__gr_8c_aac2466862bcfc18231c38fe1eacc22e3}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!V\+\_\+\+R\+ES@{V\+\_\+\+R\+ES}}
+\index{V\+\_\+\+R\+ES@{V\+\_\+\+R\+ES}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{V\+\_\+\+R\+ES}{V\_RES}}
+{\footnotesize\ttfamily \#define V\+\_\+\+R\+ES~768}
+
+\mbox{\Hypertarget{video__gr_8c_ac854e8352d97c69bdfe247573593ba3b}\label{video__gr_8c_ac854e8352d97c69bdfe247573593ba3b}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR@{V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR}}
+\index{V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR@{V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR}{VRAM\_PHYS\_ADDR}}
+{\footnotesize\ttfamily \#define V\+R\+A\+M\+\_\+\+P\+H\+Y\+S\+\_\+\+A\+D\+DR~0x\+E0000000}
+
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{video__gr_8c_a89fa3fb58e975d148fcb2413e24b78a1}\label{video__gr_8c_a89fa3fb58e975d148fcb2413e24b78a1}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!bits\+\_\+per\+\_\+pixel@{bits\+\_\+per\+\_\+pixel}}
+\index{bits\+\_\+per\+\_\+pixel@{bits\+\_\+per\+\_\+pixel}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{bits\+\_\+per\+\_\+pixel}{bits\_per\_pixel}}
+{\footnotesize\ttfamily unsigned bits\+\_\+per\+\_\+pixel\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}\label{video__gr_8c_a767d9dbba9c236b453eaaaf76976a6d0}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!double\+\_\+buffer@{double\+\_\+buffer}}
+\index{double\+\_\+buffer@{double\+\_\+buffer}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{double\+\_\+buffer}{double\_buffer}}
+{\footnotesize\ttfamily char$\ast$ double\+\_\+buffer\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{video__gr_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}\label{video__gr_8c_a43e7e5a0a8f9069e6413b2066ca52f3e}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!h\+\_\+res@{h\+\_\+res}}
+\index{h\+\_\+res@{h\+\_\+res}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{h\+\_\+res}{h\_res}}
+{\footnotesize\ttfamily unsigned h\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{video__gr_8c_a5bda1b499253a8fbf3cab646f8760391}\label{video__gr_8c_a5bda1b499253a8fbf3cab646f8760391}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!v\+\_\+res@{v\+\_\+res}}
+\index{v\+\_\+res@{v\+\_\+res}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{v\+\_\+res}{v\_res}}
+{\footnotesize\ttfamily unsigned v\+\_\+res\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}\label{video__gr_8c_a93a24e067b9083bed6fb5c0336fd7a01}} 
+\index{video\+\_\+gr.\+c@{video\+\_\+gr.\+c}!video\+\_\+mem@{video\+\_\+mem}}
+\index{video\+\_\+mem@{video\+\_\+mem}!video\+\_\+gr.\+c@{video\+\_\+gr.\+c}}
+\subsubsection{\texorpdfstring{video\+\_\+mem}{video\_mem}}
+{\footnotesize\ttfamily char$\ast$ video\+\_\+mem\hspace{0.3cm}{\ttfamily [static]}}
+

@@ -1,0 +1,7 @@
+<map id="analyze_movement" name="analyze_movement">
+<area shape="rect" id="node2" href="$mouse_8h.html#a2f7c06ece28fc6e4f414049acfb31fdb" title="checks if an input has been given by a player " alt="" coords="187,5,344,32"/>
+<area shape="rect" id="node3" href="$mouse_8h.html#a8999124a2607eccb88fa8626edd5ebe0" title="Syncronizes and fills the packet. When the packet is full, calls the print function. " alt="" coords="392,5,511,32"/>
+<area shape="rect" id="node4" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="559,5,644,32"/>
+<area shape="rect" id="node5" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="692,5,771,32"/>
+<area shape="rect" id="node6" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="819,5,869,32"/>
+</map>

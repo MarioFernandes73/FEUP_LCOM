@@ -1,0 +1,5 @@
+<map id="TIMER_subscribe_int" name="TIMER_subscribe_int">
+<area shape="rect" id="node2" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="199,5,284,32"/>
+<area shape="rect" id="node3" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="332,5,411,32"/>
+<area shape="rect" id="node4" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="459,5,509,32"/>
+</map>

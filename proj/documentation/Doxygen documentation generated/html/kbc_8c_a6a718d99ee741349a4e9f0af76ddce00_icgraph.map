@@ -1,0 +1,6 @@
+<map id="read_status_to_write" name="read_status_to_write">
+<area shape="rect" id="node2" href="$mouse_8h.html#aaa3bee4432531ad5a7189033eb5a6088" title="Writes a command/argument to the mouse and analyzes the response. " alt="" coords="196,5,291,32"/>
+<area shape="rect" id="node3" href="$game_8h.html#a434350c0629d48af15132bd626ff0e7b" title="main function that calls the game interruption handlers and the game state machine funtions ..." alt="" coords="339,5,424,32"/>
+<area shape="rect" id="node4" href="$simonsays_8c.html#a97b25d50dc55b5c8c2315fd010bc2957" title="proc_args" alt="" coords="472,5,551,32"/>
+<area shape="rect" id="node5" href="$simonsays_8c.html#a3c04138a5bfe5d72780bb7e82a18e627" title="main" alt="" coords="599,5,649,32"/>
+</map>

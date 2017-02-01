@@ -1,0 +1,210 @@
+\hypertarget{kbc_8h}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/kbc.h File Reference}
+\label{kbc_8h}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/kbc.\+h@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/kbc.\+h}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\newline
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\newline
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$minix/com.\+h$>$}\newline
+Include dependency graph for kbc.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{kbc_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(n)~(0x01$<$$<$(n))
+\item 
+\#define \hyperlink{kbc_8h_a527eb3eaec4a1cb30a1a98470e16d5a5}{T\+R\+I\+ES}~50
+\item 
+\#define \hyperlink{kbc_8h_a1a522aa19bcb695a9df30032a893bee3}{D\+E\+L\+A\+Y\+\_\+\+US}~20000
+\begin{DoxyCompactList}\small\item\em used to measure time \end{DoxyCompactList}\item 
+\#define \hyperlink{kbc_8h_a89c4d098b53809674457b1660b1af780}{S\+T\+A\+T\+\_\+\+R\+EG}~0x64
+\item 
+\#define \hyperlink{kbc_8h_a5a4a54453c9ef3337620a36939380cd3}{C\+T\+R\+L\+\_\+\+R\+EG}~0x64
+\item 
+\#define \hyperlink{kbc_8h_a783be5698cf07b1daaf126ef89c19063}{I\+N\+\_\+\+B\+UF}~0x60
+\item 
+\#define \hyperlink{kbc_8h_acfb42dde389e8ca36ab267002fbf5c6a}{O\+U\+T\+\_\+\+B\+UF}~0x60
+\item 
+\#define \hyperlink{kbc_8h_af6996d12e71a534569c41a25de7d6d52}{P\+A\+R\+I\+TY}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(7)
+\item 
+\#define \hyperlink{kbc_8h_a45ba202b05caf39795aeca91b0ae547e}{T\+I\+M\+E\+O\+UT}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(6)
+\item 
+\#define \hyperlink{kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}{A\+UX}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(5)
+\item 
+\#define \hyperlink{kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}{I\+NH}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(4)
+\item 
+\#define \hyperlink{kbc_8h_a2946bc30423c2a996eeafa49e995c30e}{A2}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(3)
+\item 
+\#define \hyperlink{kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}{S\+YS}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(2)
+\item 
+\#define \hyperlink{kbc_8h_a3c48b10907056351582baf9f6478598e}{I\+BF}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(1)
+\begin{DoxyCompactList}\small\item\em Input buffer full bit. \end{DoxyCompactList}\item 
+\#define \hyperlink{kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}{O\+BF}~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(0)
+\begin{DoxyCompactList}\small\item\em Output buffer full bit. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{kbc_8h_a553a3e42899ae0907eed9a576ab77939}{read\+\_\+status\+\_\+to\+\_\+read} ()
+\begin{DoxyCompactList}\small\item\em Reads the K\+BC status byte and checks if the output buffer is full so that we read from it. \end{DoxyCompactList}\item 
+int \hyperlink{kbc_8h_a6a718d99ee741349a4e9f0af76ddce00}{read\+\_\+status\+\_\+to\+\_\+write} ()
+\begin{DoxyCompactList}\small\item\em Reads the K\+BC status byte and checks if the input buffer is empty so that we write to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{kbc_8h_a2946bc30423c2a996eeafa49e995c30e}\label{kbc_8h_a2946bc30423c2a996eeafa49e995c30e}} 
+\index{kbc.\+h@{kbc.\+h}!A2@{A2}}
+\index{A2@{A2}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{A2}{A2}}
+{\footnotesize\ttfamily \#define A2~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(3)}
+
+\mbox{\Hypertarget{kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}\label{kbc_8h_a1b41fd2be63532d4ab910f8b256c3811}} 
+\index{kbc.\+h@{kbc.\+h}!A\+UX@{A\+UX}}
+\index{A\+UX@{A\+UX}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{A\+UX}{AUX}}
+{\footnotesize\ttfamily \#define A\+UX~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(5)}
+
+\mbox{\Hypertarget{kbc_8h_a3a8ea58898cb58fc96013383d39f482c}\label{kbc_8h_a3a8ea58898cb58fc96013383d39f482c}} 
+\index{kbc.\+h@{kbc.\+h}!B\+IT@{B\+IT}}
+\index{B\+IT@{B\+IT}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{B\+IT}{BIT}}
+{\footnotesize\ttfamily \#define B\+IT(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~(0x01$<$$<$(n))}
+
+\mbox{\Hypertarget{kbc_8h_a5a4a54453c9ef3337620a36939380cd3}\label{kbc_8h_a5a4a54453c9ef3337620a36939380cd3}} 
+\index{kbc.\+h@{kbc.\+h}!C\+T\+R\+L\+\_\+\+R\+EG@{C\+T\+R\+L\+\_\+\+R\+EG}}
+\index{C\+T\+R\+L\+\_\+\+R\+EG@{C\+T\+R\+L\+\_\+\+R\+EG}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{C\+T\+R\+L\+\_\+\+R\+EG}{CTRL\_REG}}
+{\footnotesize\ttfamily \#define C\+T\+R\+L\+\_\+\+R\+EG~0x64}
+
+\mbox{\Hypertarget{kbc_8h_a1a522aa19bcb695a9df30032a893bee3}\label{kbc_8h_a1a522aa19bcb695a9df30032a893bee3}} 
+\index{kbc.\+h@{kbc.\+h}!D\+E\+L\+A\+Y\+\_\+\+US@{D\+E\+L\+A\+Y\+\_\+\+US}}
+\index{D\+E\+L\+A\+Y\+\_\+\+US@{D\+E\+L\+A\+Y\+\_\+\+US}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{D\+E\+L\+A\+Y\+\_\+\+US}{DELAY\_US}}
+{\footnotesize\ttfamily \#define D\+E\+L\+A\+Y\+\_\+\+US~20000}
+
+
+
+used to measure time 
+
+\mbox{\Hypertarget{kbc_8h_a3c48b10907056351582baf9f6478598e}\label{kbc_8h_a3c48b10907056351582baf9f6478598e}} 
+\index{kbc.\+h@{kbc.\+h}!I\+BF@{I\+BF}}
+\index{I\+BF@{I\+BF}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{I\+BF}{IBF}}
+{\footnotesize\ttfamily \#define I\+BF~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(1)}
+
+
+
+Input buffer full bit. 
+
+\mbox{\Hypertarget{kbc_8h_a783be5698cf07b1daaf126ef89c19063}\label{kbc_8h_a783be5698cf07b1daaf126ef89c19063}} 
+\index{kbc.\+h@{kbc.\+h}!I\+N\+\_\+\+B\+UF@{I\+N\+\_\+\+B\+UF}}
+\index{I\+N\+\_\+\+B\+UF@{I\+N\+\_\+\+B\+UF}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+\_\+\+B\+UF}{IN\_BUF}}
+{\footnotesize\ttfamily \#define I\+N\+\_\+\+B\+UF~0x60}
+
+\mbox{\Hypertarget{kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}\label{kbc_8h_a03f542f1e0e2ba512c4ed189decfee3d}} 
+\index{kbc.\+h@{kbc.\+h}!I\+NH@{I\+NH}}
+\index{I\+NH@{I\+NH}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{I\+NH}{INH}}
+{\footnotesize\ttfamily \#define I\+NH~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(4)}
+
+\mbox{\Hypertarget{kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}\label{kbc_8h_a45967c9e25447ba853cf6fb4ac545fe6}} 
+\index{kbc.\+h@{kbc.\+h}!O\+BF@{O\+BF}}
+\index{O\+BF@{O\+BF}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{O\+BF}{OBF}}
+{\footnotesize\ttfamily \#define O\+BF~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(0)}
+
+
+
+Output buffer full bit. 
+
+\mbox{\Hypertarget{kbc_8h_acfb42dde389e8ca36ab267002fbf5c6a}\label{kbc_8h_acfb42dde389e8ca36ab267002fbf5c6a}} 
+\index{kbc.\+h@{kbc.\+h}!O\+U\+T\+\_\+\+B\+UF@{O\+U\+T\+\_\+\+B\+UF}}
+\index{O\+U\+T\+\_\+\+B\+UF@{O\+U\+T\+\_\+\+B\+UF}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{O\+U\+T\+\_\+\+B\+UF}{OUT\_BUF}}
+{\footnotesize\ttfamily \#define O\+U\+T\+\_\+\+B\+UF~0x60}
+
+\mbox{\Hypertarget{kbc_8h_af6996d12e71a534569c41a25de7d6d52}\label{kbc_8h_af6996d12e71a534569c41a25de7d6d52}} 
+\index{kbc.\+h@{kbc.\+h}!P\+A\+R\+I\+TY@{P\+A\+R\+I\+TY}}
+\index{P\+A\+R\+I\+TY@{P\+A\+R\+I\+TY}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{P\+A\+R\+I\+TY}{PARITY}}
+{\footnotesize\ttfamily \#define P\+A\+R\+I\+TY~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(7)}
+
+\mbox{\Hypertarget{kbc_8h_a89c4d098b53809674457b1660b1af780}\label{kbc_8h_a89c4d098b53809674457b1660b1af780}} 
+\index{kbc.\+h@{kbc.\+h}!S\+T\+A\+T\+\_\+\+R\+EG@{S\+T\+A\+T\+\_\+\+R\+EG}}
+\index{S\+T\+A\+T\+\_\+\+R\+EG@{S\+T\+A\+T\+\_\+\+R\+EG}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{S\+T\+A\+T\+\_\+\+R\+EG}{STAT\_REG}}
+{\footnotesize\ttfamily \#define S\+T\+A\+T\+\_\+\+R\+EG~0x64}
+
+\mbox{\Hypertarget{kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}\label{kbc_8h_ae3d9f52a1a315303ad04f0576bd42a25}} 
+\index{kbc.\+h@{kbc.\+h}!S\+YS@{S\+YS}}
+\index{S\+YS@{S\+YS}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{S\+YS}{SYS}}
+{\footnotesize\ttfamily \#define S\+YS~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(2)}
+
+\mbox{\Hypertarget{kbc_8h_a45ba202b05caf39795aeca91b0ae547e}\label{kbc_8h_a45ba202b05caf39795aeca91b0ae547e}} 
+\index{kbc.\+h@{kbc.\+h}!T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}}
+\index{T\+I\+M\+E\+O\+UT@{T\+I\+M\+E\+O\+UT}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+O\+UT}{TIMEOUT}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+O\+UT~\hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(6)}
+
+\mbox{\Hypertarget{kbc_8h_a527eb3eaec4a1cb30a1a98470e16d5a5}\label{kbc_8h_a527eb3eaec4a1cb30a1a98470e16d5a5}} 
+\index{kbc.\+h@{kbc.\+h}!T\+R\+I\+ES@{T\+R\+I\+ES}}
+\index{T\+R\+I\+ES@{T\+R\+I\+ES}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{T\+R\+I\+ES}{TRIES}}
+{\footnotesize\ttfamily \#define T\+R\+I\+ES~50}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{kbc_8h_a553a3e42899ae0907eed9a576ab77939}\label{kbc_8h_a553a3e42899ae0907eed9a576ab77939}} 
+\index{kbc.\+h@{kbc.\+h}!read\+\_\+status\+\_\+to\+\_\+read@{read\+\_\+status\+\_\+to\+\_\+read}}
+\index{read\+\_\+status\+\_\+to\+\_\+read@{read\+\_\+status\+\_\+to\+\_\+read}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{read\+\_\+status\+\_\+to\+\_\+read()}{read\_status\_to\_read()}}
+{\footnotesize\ttfamily int read\+\_\+status\+\_\+to\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the K\+BC status byte and checks if the output buffer is full so that we read from it. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h_a553a3e42899ae0907eed9a576ab77939_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{kbc_8h_a6a718d99ee741349a4e9f0af76ddce00}\label{kbc_8h_a6a718d99ee741349a4e9f0af76ddce00}} 
+\index{kbc.\+h@{kbc.\+h}!read\+\_\+status\+\_\+to\+\_\+write@{read\+\_\+status\+\_\+to\+\_\+write}}
+\index{read\+\_\+status\+\_\+to\+\_\+write@{read\+\_\+status\+\_\+to\+\_\+write}!kbc.\+h@{kbc.\+h}}
+\subsubsection{\texorpdfstring{read\+\_\+status\+\_\+to\+\_\+write()}{read\_status\_to\_write()}}
+{\footnotesize\ttfamily int read\+\_\+status\+\_\+to\+\_\+write (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reads the K\+BC status byte and checks if the input buffer is empty so that we write to it. 
+
+\begin{DoxyReturn}{Returns}
+Returns 0 on success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{kbc_8h_a6a718d99ee741349a4e9f0af76ddce00_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,106 @@
+\hypertarget{keyboard_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/keyboard.c File Reference}
+\label{keyboard_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/keyboard.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/keyboard.\+c}}
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}kbc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gamevariables.\+h\char`\"{}}\newline
+Include dependency graph for keyboard.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{keyboard_8c_ad0df6c5f74d323c4fb84d399774b7133}{K\+B\+D\+\_\+subscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Subscribes and enables K\+BD interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{keyboard_8c_ad10548c951a05064c50742cddcbda93d}{K\+B\+D\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes K\+BD interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{keyboard_8c_a2c4a40f39d80a858fd65210916711edb}{K\+B\+D\+\_\+handler} ()
+\begin{DoxyCompactList}\small\item\em The game\textquotesingle{}s keyboard interrupt handler. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}{hook\+\_\+id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{keyboard_8c_a2c4a40f39d80a858fd65210916711edb}\label{keyboard_8c_a2c4a40f39d80a858fd65210916711edb}} 
+\index{keyboard.\+c@{keyboard.\+c}!K\+B\+D\+\_\+handler@{K\+B\+D\+\_\+handler}}
+\index{K\+B\+D\+\_\+handler@{K\+B\+D\+\_\+handler}!keyboard.\+c@{keyboard.\+c}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+handler()}{KBD\_handler()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+handler (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The game\textquotesingle{}s keyboard interrupt handler. 
+
+\begin{DoxyReturn}{Returns}
+Returns a number according to the key pressed(input), each key has a correspondent number 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{keyboard_8c_a2c4a40f39d80a858fd65210916711edb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_a2c4a40f39d80a858fd65210916711edb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8c_ad0df6c5f74d323c4fb84d399774b7133}\label{keyboard_8c_ad0df6c5f74d323c4fb84d399774b7133}} 
+\index{keyboard.\+c@{keyboard.\+c}!K\+B\+D\+\_\+subscribe\+\_\+int@{K\+B\+D\+\_\+subscribe\+\_\+int}}
+\index{K\+B\+D\+\_\+subscribe\+\_\+int@{K\+B\+D\+\_\+subscribe\+\_\+int}!keyboard.\+c@{keyboard.\+c}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+subscribe\+\_\+int()}{KBD\_subscribe\_int()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables K\+BD interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_ad0df6c5f74d323c4fb84d399774b7133_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{keyboard_8c_ad10548c951a05064c50742cddcbda93d}\label{keyboard_8c_ad10548c951a05064c50742cddcbda93d}} 
+\index{keyboard.\+c@{keyboard.\+c}!K\+B\+D\+\_\+unsubscribe\+\_\+int@{K\+B\+D\+\_\+unsubscribe\+\_\+int}}
+\index{K\+B\+D\+\_\+unsubscribe\+\_\+int@{K\+B\+D\+\_\+unsubscribe\+\_\+int}!keyboard.\+c@{keyboard.\+c}}
+\subsubsection{\texorpdfstring{K\+B\+D\+\_\+unsubscribe\+\_\+int()}{KBD\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int K\+B\+D\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes K\+BD interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{keyboard_8c_ad10548c951a05064c50742cddcbda93d_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}\label{keyboard_8c_a96f78a87d064e47d627d222f67a8d012}} 
+\index{keyboard.\+c@{keyboard.\+c}!hook\+\_\+id@{hook\+\_\+id}}
+\index{hook\+\_\+id@{hook\+\_\+id}!keyboard.\+c@{keyboard.\+c}}
+\subsubsection{\texorpdfstring{hook\+\_\+id}{hook\_id}}
+{\footnotesize\ttfamily int hook\+\_\+id\hspace{0.3cm}{\ttfamily [static]}}
+

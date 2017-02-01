@@ -1,0 +1,423 @@
+\hypertarget{mouse_8c}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/mouse.c File Reference}
+\label{mouse_8c}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/mouse.\+c@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/mouse.\+c}}
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+Include dependency graph for mouse.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{mouse_8c_a6d3b81c9a8ca496a7d4fdf5dad05b238}{analyze\+\_\+movement} ()
+\begin{DoxyCompactList}\small\item\em Analizes the x an y mouse movement on every packet. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_a891f207527c42b4a05b13d3252e50a47}{declare\+\_\+event} ()
+\begin{DoxyCompactList}\small\item\em Declares an event based on the machine current state and then changes the current state based on that same event. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_ab02dc59520aa1978bae72f0c0d66c179}{M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int} (void)
+\begin{DoxyCompactList}\small\item\em To subscribe mouse interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_a4fd9e61028b50f013ee4cc89c4ea8691}{M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em To unsubscribe mouse interrupts. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_a8999124a2607eccb88fa8626edd5ebe0}{M\+O\+U\+S\+E\+\_\+handler} (\hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t} \hyperlink{game_8c_aed766d1a38b70be51df494da921471fa}{game\+\_\+state})
+\begin{DoxyCompactList}\small\item\em Syncronizes and fills the packet. When the packet is full, calls the print function. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_a2f7c06ece28fc6e4f414049acfb31fdb}{M\+O\+U\+S\+E\+\_\+analyze\+\_\+input} (\hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t} \hyperlink{game_8c_aed766d1a38b70be51df494da921471fa}{game\+\_\+state})
+\begin{DoxyCompactList}\small\item\em checks if an input has been given by a player \end{DoxyCompactList}\item 
+void \hyperlink{mouse_8c_ad4a9a360ffcfb781a860b095336636df}{M\+O\+U\+S\+E\+\_\+set\+\_\+coord} ()
+\begin{DoxyCompactList}\small\item\em updates the mouse coordinates according to the distance travelled in the last movement \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_a1e61aef653065d86a6c15c8a04082459}{check\+\_\+bit} (unsigned long n, unsigned long bit)
+\begin{DoxyCompactList}\small\item\em Compares a number and a bit. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_adb3826ace4da114a7f7f974df1c59492}{convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal} (unsigned long n)
+\begin{DoxyCompactList}\small\item\em Converts a given negative number represented in 2\textquotesingle{}s complement to a decimal base integer. \end{DoxyCompactList}\item 
+int \hyperlink{mouse_8c_aaa3bee4432531ad5a7189033eb5a6088}{write\+\_\+mouse} (unsigned char cmd)
+\begin{DoxyCompactList}\small\item\em Writes a command/argument to the mouse and analyzes the response. \end{DoxyCompactList}\item 
+void \hyperlink{mouse_8c_af06c9b7d8f666d2f3bd1ec96b3886e2b}{M\+O\+U\+S\+E\+\_\+get\+\_\+coord} (int $\ast$X, int $\ast$Y)
+\begin{DoxyCompactList}\small\item\em gives the current mouse coordinates \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+static int \hyperlink{mouse_8c_a96f78a87d064e47d627d222f67a8d012}{hook\+\_\+id} = \hyperlink{mouse_8h_a6c629ace1736b68a0a57fa5da88d6cde}{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+M\+O\+U\+SE}
+\item 
+static unsigned long \hyperlink{mouse_8c_adbf067b12d66e0b4c1afe05331fe4edb}{packet} \mbox{[}3\mbox{]}
+\item 
+static unsigned long \hyperlink{mouse_8c_ab879eb14c44e0ce873a2ad606ce5cb51}{sync\+\_\+flag}
+\item 
+static int \hyperlink{mouse_8c_a886d551d5381dc3e53f17825ffc51641}{direction} =0
+\item 
+static short \hyperlink{mouse_8c_a2684c6182981a530ef387df5e1e9ca72}{distance\+\_\+travelled\+\_\+y} = 0
+\item 
+static int \hyperlink{mouse_8c_a6fb5a70843c16e06fe5a1f1a0cd4dc07}{surpass\+\_\+y\+\_\+length} = 0
+\item 
+static int \hyperlink{mouse_8c_a890f92b451723e406e648c6fc7015d09}{Xcoord} = 20
+\item 
+static int \hyperlink{mouse_8c_a683fd6ed4dc4a8fe858b3af175c160da}{Ycoord} = 20
+\item 
+\hyperlink{mouse_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t} \hyperlink{mouse_8c_a499e7824037af983d0524a98081e7f0b}{state} =\hyperlink{mouse_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}{I\+N\+IT}
+\item 
+\hyperlink{mouse_8h_aabca14b349ba212174a00ffc1d2a2f31}{ev\+\_\+type\+\_\+t} \hyperlink{mouse_8c_a06dcd934ae5c1312d89e2971ae22f69c}{event} =\hyperlink{mouse_8h_aabca14b349ba212174a00ffc1d2a2f31a7905fcd753e9915a521ea77aa7066415}{N\+ON}
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{mouse_8c_a6d3b81c9a8ca496a7d4fdf5dad05b238}\label{mouse_8c_a6d3b81c9a8ca496a7d4fdf5dad05b238}} 
+\index{mouse.\+c@{mouse.\+c}!analyze\+\_\+movement@{analyze\+\_\+movement}}
+\index{analyze\+\_\+movement@{analyze\+\_\+movement}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{analyze\+\_\+movement()}{analyze\_movement()}}
+{\footnotesize\ttfamily void analyze\+\_\+movement (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Analizes the x an y mouse movement on every packet. 
+
+sets the direction variable according to the movement direction direction 1 means that both x and y movement is non negative
+
+direction -\/1 means that both x and y movement is non positive
+
+direction 0 means that a movement different from all the other directions
+
+also registers the y movement accumulation , if direction is different that zero
+
+the objective of this function is to understand when a positive slope with the minimum length on y movement has happened and when it does happen, it sets the variable surpass\+\_\+y\+\_\+length to 1 Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a6d3b81c9a8ca496a7d4fdf5dad05b238_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a6d3b81c9a8ca496a7d4fdf5dad05b238_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a1e61aef653065d86a6c15c8a04082459}\label{mouse_8c_a1e61aef653065d86a6c15c8a04082459}} 
+\index{mouse.\+c@{mouse.\+c}!check\+\_\+bit@{check\+\_\+bit}}
+\index{check\+\_\+bit@{check\+\_\+bit}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{check\+\_\+bit()}{check\_bit()}}
+{\footnotesize\ttfamily int check\+\_\+bit (\begin{DoxyParamCaption}\item[{unsigned long}]{n,  }\item[{unsigned long}]{bit }\end{DoxyParamCaption})}
+
+
+
+Compares a number and a bit. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/$>$ number whose given B\+IT will be checked ; bit-\/$>$ B\+IT to check\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if the given bit is active(set to 1) and retuurns 0 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a1e61aef653065d86a6c15c8a04082459_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_adb3826ace4da114a7f7f974df1c59492}\label{mouse_8c_adb3826ace4da114a7f7f974df1c59492}} 
+\index{mouse.\+c@{mouse.\+c}!convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal@{convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal}}
+\index{convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal@{convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal()}{convert\_negative\_2complement\_to\_decimal()}}
+{\footnotesize\ttfamily int convert\+\_\+negative\+\_\+2complement\+\_\+to\+\_\+decimal (\begin{DoxyParamCaption}\item[{unsigned long}]{n }\end{DoxyParamCaption})}
+
+
+
+Converts a given negative number represented in 2\textquotesingle{}s complement to a decimal base integer. 
+
+The given number in 2�s complement does not include the sign bit, and it will always be treated has a negative number That being said, this function should only be called with a negative number
+
+The returned integer is always positive
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & -\/$>$ negative number expressed in 2\textquotesingle{}s complement, without the sign bit\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns n converted to a decimal base integer (absolute value) 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_adb3826ace4da114a7f7f974df1c59492_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a891f207527c42b4a05b13d3252e50a47}\label{mouse_8c_a891f207527c42b4a05b13d3252e50a47}} 
+\index{mouse.\+c@{mouse.\+c}!declare\+\_\+event@{declare\+\_\+event}}
+\index{declare\+\_\+event@{declare\+\_\+event}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{declare\+\_\+event()}{declare\_event()}}
+{\footnotesize\ttfamily int declare\+\_\+event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Declares an event based on the machine current state and then changes the current state based on that same event. 
+
+\begin{DoxyReturn}{Returns}
+Returns 1 if the machine has accomplished its final state(a positive slope has been drawn pressing the right button, returns 0 otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a891f207527c42b4a05b13d3252e50a47_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a2f7c06ece28fc6e4f414049acfb31fdb}\label{mouse_8c_a2f7c06ece28fc6e4f414049acfb31fdb}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+analyze\+\_\+input@{M\+O\+U\+S\+E\+\_\+analyze\+\_\+input}}
+\index{M\+O\+U\+S\+E\+\_\+analyze\+\_\+input@{M\+O\+U\+S\+E\+\_\+analyze\+\_\+input}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+analyze\+\_\+input()}{MOUSE\_analyze\_input()}}
+{\footnotesize\ttfamily int M\+O\+U\+S\+E\+\_\+analyze\+\_\+input (\begin{DoxyParamCaption}\item[{\hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}}]{game\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+checks if an input has been given by a player 
+
+The possible inputs that this functions registers are selecting a figure on the screen or doing a positive slope
+
+It analyzes the current game state to know if a mouse click on the screen should be treated has a click on a figure in the game board or a click in the start button in the main menu, for example
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+state} & current state of the game\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the input given by the player 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a2f7c06ece28fc6e4f414049acfb31fdb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a2f7c06ece28fc6e4f414049acfb31fdb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_af06c9b7d8f666d2f3bd1ec96b3886e2b}\label{mouse_8c_af06c9b7d8f666d2f3bd1ec96b3886e2b}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+get\+\_\+coord@{M\+O\+U\+S\+E\+\_\+get\+\_\+coord}}
+\index{M\+O\+U\+S\+E\+\_\+get\+\_\+coord@{M\+O\+U\+S\+E\+\_\+get\+\_\+coord}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+get\+\_\+coord()}{MOUSE\_get\_coord()}}
+{\footnotesize\ttfamily void M\+O\+U\+S\+E\+\_\+get\+\_\+coord (\begin{DoxyParamCaption}\item[{int $\ast$}]{X,  }\item[{int $\ast$}]{Y }\end{DoxyParamCaption})}
+
+
+
+gives the current mouse coordinates 
+
+
+\begin{DoxyParams}{Parameters}
+{\em X} & pointer to wich will be sent the current mouse x coordinate\\
+\hline
+{\em Y} & pointer to wich will be sent the current mouse y coordinate \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_af06c9b7d8f666d2f3bd1ec96b3886e2b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a8999124a2607eccb88fa8626edd5ebe0}\label{mouse_8c_a8999124a2607eccb88fa8626edd5ebe0}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+handler@{M\+O\+U\+S\+E\+\_\+handler}}
+\index{M\+O\+U\+S\+E\+\_\+handler@{M\+O\+U\+S\+E\+\_\+handler}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+handler()}{MOUSE\_handler()}}
+{\footnotesize\ttfamily int M\+O\+U\+S\+E\+\_\+handler (\begin{DoxyParamCaption}\item[{\hyperlink{gamevariables_8h_a4edce1ca040716922b6e4a79be4e414d}{game\+\_\+state\+\_\+t}}]{game\+\_\+state }\end{DoxyParamCaption})}
+
+
+
+Syncronizes and fills the packet. When the packet is full, calls the print function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em game\+\_\+state} & current game state\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns the input given by the player. Returns 0 if the mouse packet is not yet full. Returns -\/2 or 1 if there are otehr types of errors 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a8999124a2607eccb88fa8626edd5ebe0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a8999124a2607eccb88fa8626edd5ebe0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_ad4a9a360ffcfb781a860b095336636df}\label{mouse_8c_ad4a9a360ffcfb781a860b095336636df}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+set\+\_\+coord@{M\+O\+U\+S\+E\+\_\+set\+\_\+coord}}
+\index{M\+O\+U\+S\+E\+\_\+set\+\_\+coord@{M\+O\+U\+S\+E\+\_\+set\+\_\+coord}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+set\+\_\+coord()}{MOUSE\_set\_coord()}}
+{\footnotesize\ttfamily void M\+O\+U\+S\+E\+\_\+set\+\_\+coord (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+updates the mouse coordinates according to the distance travelled in the last movement 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_ad4a9a360ffcfb781a860b095336636df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_ad4a9a360ffcfb781a860b095336636df_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_ab02dc59520aa1978bae72f0c0d66c179}\label{mouse_8c_ab02dc59520aa1978bae72f0c0d66c179}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int@{M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int}}
+\index{M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int@{M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int()}{MOUSE\_subscribe\_int()}}
+{\footnotesize\ttfamily int M\+O\+U\+S\+E\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+To subscribe mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+M\+O\+U\+SE upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_ab02dc59520aa1978bae72f0c0d66c179_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_a4fd9e61028b50f013ee4cc89c4ea8691}\label{mouse_8c_a4fd9e61028b50f013ee4cc89c4ea8691}} 
+\index{mouse.\+c@{mouse.\+c}!M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int@{M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int}}
+\index{M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int@{M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int()}{MOUSE\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int M\+O\+U\+S\+E\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+To unsubscribe mouse interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_a4fd9e61028b50f013ee4cc89c4ea8691_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{mouse_8c_aaa3bee4432531ad5a7189033eb5a6088}\label{mouse_8c_aaa3bee4432531ad5a7189033eb5a6088}} 
+\index{mouse.\+c@{mouse.\+c}!write\+\_\+mouse@{write\+\_\+mouse}}
+\index{write\+\_\+mouse@{write\+\_\+mouse}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{write\+\_\+mouse()}{write\_mouse()}}
+{\footnotesize\ttfamily int write\+\_\+mouse (\begin{DoxyParamCaption}\item[{unsigned char}]{cmd }\end{DoxyParamCaption})}
+
+
+
+Writes a command/argument to the mouse and analyzes the response. 
+
+First writes the 0x\+D4 command to the K\+BC, and then writes the given command/argument to the mouse.
+
+After this, reads the mouse response to the command/argument sent
+
+
+\begin{DoxyParams}{Parameters}
+{\em cmd} & -\/$>$ command/argument to send to the mouse\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Return 0 if the response is A\+CK and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{mouse_8c_aaa3bee4432531ad5a7189033eb5a6088_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{mouse_8c_aaa3bee4432531ad5a7189033eb5a6088_icgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Variable Documentation}
+\mbox{\Hypertarget{mouse_8c_a886d551d5381dc3e53f17825ffc51641}\label{mouse_8c_a886d551d5381dc3e53f17825ffc51641}} 
+\index{mouse.\+c@{mouse.\+c}!direction@{direction}}
+\index{direction@{direction}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{direction}{direction}}
+{\footnotesize\ttfamily int direction =0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_a2684c6182981a530ef387df5e1e9ca72}\label{mouse_8c_a2684c6182981a530ef387df5e1e9ca72}} 
+\index{mouse.\+c@{mouse.\+c}!distance\+\_\+travelled\+\_\+y@{distance\+\_\+travelled\+\_\+y}}
+\index{distance\+\_\+travelled\+\_\+y@{distance\+\_\+travelled\+\_\+y}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{distance\+\_\+travelled\+\_\+y}{distance\_travelled\_y}}
+{\footnotesize\ttfamily short distance\+\_\+travelled\+\_\+y = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_a06dcd934ae5c1312d89e2971ae22f69c}\label{mouse_8c_a06dcd934ae5c1312d89e2971ae22f69c}} 
+\index{mouse.\+c@{mouse.\+c}!event@{event}}
+\index{event@{event}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{event}{event}}
+{\footnotesize\ttfamily \hyperlink{mouse_8h_aabca14b349ba212174a00ffc1d2a2f31}{ev\+\_\+type\+\_\+t} event =\hyperlink{mouse_8h_aabca14b349ba212174a00ffc1d2a2f31a7905fcd753e9915a521ea77aa7066415}{N\+ON}}
+
+\mbox{\Hypertarget{mouse_8c_a96f78a87d064e47d627d222f67a8d012}\label{mouse_8c_a96f78a87d064e47d627d222f67a8d012}} 
+\index{mouse.\+c@{mouse.\+c}!hook\+\_\+id@{hook\+\_\+id}}
+\index{hook\+\_\+id@{hook\+\_\+id}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{hook\+\_\+id}{hook\_id}}
+{\footnotesize\ttfamily int hook\+\_\+id = \hyperlink{mouse_8h_a6c629ace1736b68a0a57fa5da88d6cde}{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+M\+O\+U\+SE}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_adbf067b12d66e0b4c1afe05331fe4edb}\label{mouse_8c_adbf067b12d66e0b4c1afe05331fe4edb}} 
+\index{mouse.\+c@{mouse.\+c}!packet@{packet}}
+\index{packet@{packet}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{packet}{packet}}
+{\footnotesize\ttfamily unsigned long packet\mbox{[}3\mbox{]}\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_a499e7824037af983d0524a98081e7f0b}\label{mouse_8c_a499e7824037af983d0524a98081e7f0b}} 
+\index{mouse.\+c@{mouse.\+c}!state@{state}}
+\index{state@{state}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily \hyperlink{mouse_8h_aa0aafed44fec19806d8f9ad834be1248}{state\+\_\+t} state =\hyperlink{mouse_8h_aa0aafed44fec19806d8f9ad834be1248a0cb1b2c6a7db1f1084886c98909a3f36}{I\+N\+IT}}
+
+\mbox{\Hypertarget{mouse_8c_a6fb5a70843c16e06fe5a1f1a0cd4dc07}\label{mouse_8c_a6fb5a70843c16e06fe5a1f1a0cd4dc07}} 
+\index{mouse.\+c@{mouse.\+c}!surpass\+\_\+y\+\_\+length@{surpass\+\_\+y\+\_\+length}}
+\index{surpass\+\_\+y\+\_\+length@{surpass\+\_\+y\+\_\+length}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{surpass\+\_\+y\+\_\+length}{surpass\_y\_length}}
+{\footnotesize\ttfamily int surpass\+\_\+y\+\_\+length = 0\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_ab879eb14c44e0ce873a2ad606ce5cb51}\label{mouse_8c_ab879eb14c44e0ce873a2ad606ce5cb51}} 
+\index{mouse.\+c@{mouse.\+c}!sync\+\_\+flag@{sync\+\_\+flag}}
+\index{sync\+\_\+flag@{sync\+\_\+flag}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{sync\+\_\+flag}{sync\_flag}}
+{\footnotesize\ttfamily unsigned long sync\+\_\+flag\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_a890f92b451723e406e648c6fc7015d09}\label{mouse_8c_a890f92b451723e406e648c6fc7015d09}} 
+\index{mouse.\+c@{mouse.\+c}!Xcoord@{Xcoord}}
+\index{Xcoord@{Xcoord}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{Xcoord}{Xcoord}}
+{\footnotesize\ttfamily int Xcoord = 20\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{mouse_8c_a683fd6ed4dc4a8fe858b3af175c160da}\label{mouse_8c_a683fd6ed4dc4a8fe858b3af175c160da}} 
+\index{mouse.\+c@{mouse.\+c}!Ycoord@{Ycoord}}
+\index{Ycoord@{Ycoord}!mouse.\+c@{mouse.\+c}}
+\subsubsection{\texorpdfstring{Ycoord}{Ycoord}}
+{\footnotesize\ttfamily int Ycoord = 20\hspace{0.3cm}{\ttfamily [static]}}
+

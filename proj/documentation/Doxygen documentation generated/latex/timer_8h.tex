@@ -1,0 +1,136 @@
+\hypertarget{timer_8h}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/timer.h File Reference}
+\label{timer_8h}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/timer.\+h@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/timer.\+h}}
+{\ttfamily \#include $<$minix/syslib.\+h$>$}\newline
+{\ttfamily \#include $<$minix/drivers.\+h$>$}\newline
+{\ttfamily \#include $<$minix/sysutil.\+h$>$}\newline
+{\ttfamily \#include $<$minix/com.\+h$>$}\newline
+Include dependency graph for timer.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{timer_8h_a3a8ea58898cb58fc96013383d39f482c}{B\+IT}(n)~(0x01$<$$<$(n))
+\item 
+\#define \hyperlink{timer_8h_a6e76546b12e9964bc8e2a997e27570b0}{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER}~0
+\item 
+\#define \hyperlink{timer_8h_a7621e08bc76ef33917bed9354ce2bd99}{C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ}~60
+\item 
+\#define \hyperlink{timer_8h_a7095fb363d08f6646611f9a47806647b}{T\+I\+M\+E\+R\+\_\+\+I\+RQ}~0
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{timer_8h_a6f508807335c1664745866bf484fe756}{T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Subscribes and enables timer interrupts. \end{DoxyCompactList}\item 
+void \hyperlink{timer_8h_a9a4030354a3cd8c8ae23953ac157b03f}{timer\+\_\+handler} (unsigned int $\ast$\hyperlink{game_8c_ab54283a672f4b80136585c9973814206}{timer\+\_\+counter}, unsigned int $\ast$\hyperlink{game_8c_a83e57ce9bd59cfa0995c2e2c8589c274}{time})
+\begin{DoxyCompactList}\small\item\em The game\textquotesingle{}s timer interrupt handler. \end{DoxyCompactList}\item 
+int \hyperlink{timer_8h_a78d0753950898ac81a0db99dd12b1c42}{T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int} ()
+\begin{DoxyCompactList}\small\item\em Unsubscribes the timer interrupts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{timer_8h_a3a8ea58898cb58fc96013383d39f482c}\label{timer_8h_a3a8ea58898cb58fc96013383d39f482c}} 
+\index{timer.\+h@{timer.\+h}!B\+IT@{B\+IT}}
+\index{B\+IT@{B\+IT}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{B\+IT}{BIT}}
+{\footnotesize\ttfamily \#define B\+IT(\begin{DoxyParamCaption}\item[{}]{n }\end{DoxyParamCaption})~(0x01$<$$<$(n))}
+
+\mbox{\Hypertarget{timer_8h_a7621e08bc76ef33917bed9354ce2bd99}\label{timer_8h_a7621e08bc76ef33917bed9354ce2bd99}} 
+\index{timer.\+h@{timer.\+h}!C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ@{C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ}}
+\index{C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ@{C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ}{COMPUTER\_FREQ}}
+{\footnotesize\ttfamily \#define C\+O\+M\+P\+U\+T\+E\+R\+\_\+\+F\+R\+EQ~60}
+
+\mbox{\Hypertarget{timer_8h_a6e76546b12e9964bc8e2a997e27570b0}\label{timer_8h_a6e76546b12e9964bc8e2a997e27570b0}} 
+\index{timer.\+h@{timer.\+h}!H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER@{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER}}
+\index{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER@{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER}{HOOK\_ID\_BIT\_TIMER}}
+{\footnotesize\ttfamily \#define H\+O\+O\+K\+\_\+\+I\+D\+\_\+\+B\+I\+T\+\_\+\+T\+I\+M\+ER~0}
+
+\mbox{\Hypertarget{timer_8h_a7095fb363d08f6646611f9a47806647b}\label{timer_8h_a7095fb363d08f6646611f9a47806647b}} 
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+\+I\+RQ@{T\+I\+M\+E\+R\+\_\+\+I\+RQ}}
+\index{T\+I\+M\+E\+R\+\_\+\+I\+RQ@{T\+I\+M\+E\+R\+\_\+\+I\+RQ}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+\+I\+RQ}{TIMER\_IRQ}}
+{\footnotesize\ttfamily \#define T\+I\+M\+E\+R\+\_\+\+I\+RQ~0}
+
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{timer_8h_a9a4030354a3cd8c8ae23953ac157b03f}\label{timer_8h_a9a4030354a3cd8c8ae23953ac157b03f}} 
+\index{timer.\+h@{timer.\+h}!timer\+\_\+handler@{timer\+\_\+handler}}
+\index{timer\+\_\+handler@{timer\+\_\+handler}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+handler()}{timer\_handler()}}
+{\footnotesize\ttfamily void timer\+\_\+handler (\begin{DoxyParamCaption}\item[{unsigned int $\ast$}]{timer\+\_\+counter,  }\item[{unsigned int $\ast$}]{time }\end{DoxyParamCaption})}
+
+
+
+The game\textquotesingle{}s timer interrupt handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em timer\+\_\+counter} & is increased by one in each timer interrupt \\
+\hline
+{\em time} & is increased by one every second \\
+\hline
+\end{DoxyParams}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_a9a4030354a3cd8c8ae23953ac157b03f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer_8h_a6f508807335c1664745866bf484fe756}\label{timer_8h_a6f508807335c1664745866bf484fe756}} 
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int@{T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int}}
+\index{T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int@{T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int()}{TIMER\_subscribe\_int()}}
+{\footnotesize\ttfamily int T\+I\+M\+E\+R\+\_\+subscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Subscribes and enables timer interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Returns bit order in interrupt mask; negative value on failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_a6f508807335c1664745866bf484fe756_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{timer_8h_a78d0753950898ac81a0db99dd12b1c42}\label{timer_8h_a78d0753950898ac81a0db99dd12b1c42}} 
+\index{timer.\+h@{timer.\+h}!T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int@{T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int}}
+\index{T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int@{T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int}!timer.\+h@{timer.\+h}}
+\subsubsection{\texorpdfstring{T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int()}{TIMER\_unsubscribe\_int()}}
+{\footnotesize\ttfamily int T\+I\+M\+E\+R\+\_\+unsubscribe\+\_\+int (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Unsubscribes the timer interrupts. 
+
+\begin{DoxyReturn}{Returns}
+Return 0 upon success and non-\/zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{timer_8h_a78d0753950898ac81a0db99dd12b1c42_icgraph}
+\end{center}
+\end{figure}

@@ -1,0 +1,185 @@
+\hypertarget{group__video__gr}{}\section{video\+\_\+gr}
+\label{group__video__gr}\index{video\+\_\+gr@{video\+\_\+gr}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \hyperlink{group__video__gr_ga06d4b54021d33d2447a61b9de3982810}{map\+\_\+\+V\+R\+AM} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em maps the V\+R\+AM address \end{DoxyCompactList}\item 
+void $\ast$ \hyperlink{group__video__gr_gacef21667c79365d57a084bed994c2189}{vg\+\_\+init} (unsigned short mode)
+\begin{DoxyCompactList}\small\item\em Initializes the video module in graphics mode. \end{DoxyCompactList}\item 
+int \hyperlink{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}{vg\+\_\+exit} (void)
+\begin{DoxyCompactList}\small\item\em Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) \end{DoxyCompactList}\item 
+unsigned \hyperlink{group__video__gr_gae2b9b38f4f97e1c580123c8e9a993353}{get\+Hor\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em Gives the current video horizontal resolution. \end{DoxyCompactList}\item 
+unsigned \hyperlink{group__video__gr_ga7ee85b0f333d227380a2c43e5fb8507a}{get\+Ver\+Resolution} ()
+\begin{DoxyCompactList}\small\item\em Gives the current video vertical resolution. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{group__video__gr_ga0823d182cf2b320e5f344bdc420a02d0}{get\+Graphics\+Buffer} ()
+\begin{DoxyCompactList}\small\item\em Gives the double buffer\textquotesingle{}s address. \end{DoxyCompactList}\item 
+void \hyperlink{group__video__gr_gad42c7cf5f54fed0714fcf1f6e5e35bee}{swap\+\_\+buffer} ()
+\begin{DoxyCompactList}\small\item\em Sends the double buffer content to the V\+R\+AM. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Functions for outputing data to screen in graphics mode 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__video__gr_ga0823d182cf2b320e5f344bdc420a02d0}\label{group__video__gr_ga0823d182cf2b320e5f344bdc420a02d0}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Graphics\+Buffer@{get\+Graphics\+Buffer}}
+\index{get\+Graphics\+Buffer@{get\+Graphics\+Buffer}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{get\+Graphics\+Buffer()}{getGraphicsBuffer()}}
+{\footnotesize\ttfamily char$\ast$ get\+Graphics\+Buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gives the double buffer\textquotesingle{}s address. 
+
+\begin{DoxyReturn}{Returns}
+double buffer\textquotesingle{}s address 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_ga0823d182cf2b320e5f344bdc420a02d0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_gae2b9b38f4f97e1c580123c8e9a993353}\label{group__video__gr_gae2b9b38f4f97e1c580123c8e9a993353}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Hor\+Resolution@{get\+Hor\+Resolution}}
+\index{get\+Hor\+Resolution@{get\+Hor\+Resolution}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{get\+Hor\+Resolution()}{getHorResolution()}}
+{\footnotesize\ttfamily unsigned get\+Hor\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gives the current video horizontal resolution. 
+
+\begin{DoxyReturn}{Returns}
+current video horizontal resolution 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_gae2b9b38f4f97e1c580123c8e9a993353_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_ga7ee85b0f333d227380a2c43e5fb8507a}\label{group__video__gr_ga7ee85b0f333d227380a2c43e5fb8507a}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!get\+Ver\+Resolution@{get\+Ver\+Resolution}}
+\index{get\+Ver\+Resolution@{get\+Ver\+Resolution}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{get\+Ver\+Resolution()}{getVerResolution()}}
+{\footnotesize\ttfamily unsigned get\+Ver\+Resolution (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gives the current video vertical resolution. 
+
+\begin{DoxyReturn}{Returns}
+current video vertical resolution 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_ga7ee85b0f333d227380a2c43e5fb8507a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_ga06d4b54021d33d2447a61b9de3982810}\label{group__video__gr_ga06d4b54021d33d2447a61b9de3982810}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!map\+\_\+\+V\+R\+AM@{map\+\_\+\+V\+R\+AM}}
+\index{map\+\_\+\+V\+R\+AM@{map\+\_\+\+V\+R\+AM}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{map\+\_\+\+V\+R\+A\+M()}{map\_VRAM()}}
+{\footnotesize\ttfamily void$\ast$ map\+\_\+\+V\+R\+AM (\begin{DoxyParamCaption}\item[{unsigned short}]{mode }\end{DoxyParamCaption})}
+
+
+
+maps the V\+R\+AM address 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & video mode to wich the graphics will be set \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{group__video__gr_ga06d4b54021d33d2447a61b9de3982810_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_ga06d4b54021d33d2447a61b9de3982810_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_gad42c7cf5f54fed0714fcf1f6e5e35bee}\label{group__video__gr_gad42c7cf5f54fed0714fcf1f6e5e35bee}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!swap\+\_\+buffer@{swap\+\_\+buffer}}
+\index{swap\+\_\+buffer@{swap\+\_\+buffer}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{swap\+\_\+buffer()}{swap\_buffer()}}
+{\footnotesize\ttfamily void swap\+\_\+buffer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Sends the double buffer content to the V\+R\+AM. 
+
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_gad42c7cf5f54fed0714fcf1f6e5e35bee_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}\label{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+exit@{vg\+\_\+exit}}
+\index{vg\+\_\+exit@{vg\+\_\+exit}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{vg\+\_\+exit()}{vg\_exit()}}
+{\footnotesize\ttfamily int vg\+\_\+exit (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Returns to default Minix 3 text mode (0x03\+: 25 x 80, 16 colors) 
+
+\begin{DoxyReturn}{Returns}
+0 upon success, non-\/zero upon failure 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_ga42f593e6656f1a978315aff02b1bcebf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{group__video__gr_gacef21667c79365d57a084bed994c2189}\label{group__video__gr_gacef21667c79365d57a084bed994c2189}} 
+\index{video\+\_\+gr@{video\+\_\+gr}!vg\+\_\+init@{vg\+\_\+init}}
+\index{vg\+\_\+init@{vg\+\_\+init}!video\+\_\+gr@{video\+\_\+gr}}
+\subsubsection{\texorpdfstring{vg\+\_\+init()}{vg\_init()}}
+{\footnotesize\ttfamily void$\ast$ vg\+\_\+init (\begin{DoxyParamCaption}\item[{unsigned short}]{mode }\end{DoxyParamCaption})}
+
+
+
+Initializes the video module in graphics mode. 
+
+Uses the V\+BE I\+NT 0x10 interface to set the desired graphics mode, maps V\+R\+AM to the process\textquotesingle{} address space and initializes static global variables with the resolution of the screen, and the number of colors
+
+
+\begin{DoxyParams}{Parameters}
+{\em mode} & 16-\/bit V\+BE mode to set \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Virtual address V\+R\+AM was mapped to. N\+U\+LL, upon failure. 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_gacef21667c79365d57a084bed994c2189_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__video__gr_gacef21667c79365d57a084bed994c2189_icgraph}
+\end{center}
+\end{figure}

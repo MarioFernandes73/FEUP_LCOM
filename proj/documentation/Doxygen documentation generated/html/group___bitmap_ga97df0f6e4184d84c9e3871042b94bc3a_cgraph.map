@@ -1,0 +1,6 @@
+<map id="draw_number" name="draw_number">
+<area shape="rect" id="node2" href="$group___bitmap.html#ga18d05a1c671f4638bc63d37874efb9d4" title="Draws an unscaled, unrotated bitmap at the given position. " alt="" coords="152,56,243,83"/>
+<area shape="rect" id="node3" href="$group__video__gr.html#gae2b9b38f4f97e1c580123c8e9a993353" title="Gives the current video horizontal resolution. " alt="" coords="293,5,414,32"/>
+<area shape="rect" id="node4" href="$group__video__gr.html#ga7ee85b0f333d227380a2c43e5fb8507a" title="Gives the current video vertical resolution. " alt="" coords="293,56,414,83"/>
+<area shape="rect" id="node5" href="$group__video__gr.html#ga0823d182cf2b320e5f344bdc420a02d0" title="Gives the double buffer&#39;s address. " alt="" coords="291,107,416,133"/>
+</map>

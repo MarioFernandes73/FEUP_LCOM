@@ -1,0 +1,7 @@
+<map id="MOUSE_analyze_input" name="MOUSE_analyze_input">
+<area shape="rect" id="node2" href="$mouse_8c.html#ad4a9a360ffcfb781a860b095336636df" title="updates the mouse coordinates according to the distance travelled in the last movement ..." alt="" coords="211,5,345,32"/>
+<area shape="rect" id="node4" href="$mouse_8c.html#a1e61aef653065d86a6c15c8a04082459" title="Compares a number and a bit. " alt="" coords="239,56,317,83"/>
+<area shape="rect" id="node5" href="$mouse_8c.html#a6d3b81c9a8ca496a7d4fdf5dad05b238" title="Analizes the x an y mouse movement on every packet. " alt="" coords="211,107,345,133"/>
+<area shape="rect" id="node6" href="$mouse_8c.html#a891f207527c42b4a05b13d3252e50a47" title="Declares an event based on the machine current state and then changes the current state based on that..." alt="" coords="227,157,329,184"/>
+<area shape="rect" id="node3" href="$mouse_8c.html#adb3826ace4da114a7f7f974df1c59492" title="Converts a given negative number represented in 2&#39;s complement to a decimal base integer. " alt="" coords="393,49,596,90"/>
+</map>

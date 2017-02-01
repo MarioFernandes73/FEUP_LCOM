@@ -1,0 +1,189 @@
+\hypertarget{game_8h}{}\section{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+OM -\/ 2ºano -\/ 2º semestre/source/game.h File Reference}
+\label{game_8h}\index{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/game.\+h@{C\+:/\+Users/\+Nelson/\+Desktop/\+L\+C\+O\+M -\/ 2ºano -\/ 2º semestre/source/game.\+h}}
+{\ttfamily \#include \char`\"{}keyboard.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}video\+\_\+gr.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vbe.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mouse.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gamevariables.\+h\char`\"{}}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{game_8h_a434350c0629d48af15132bd626ff0e7b}{simonsays} ()
+\begin{DoxyCompactList}\small\item\em main function that calls the game interruption handlers and the game state machine funtions \end{DoxyCompactList}\item 
+void \hyperlink{game_8h_a8101733e49b7935d3b1b8d2bb83dd42f}{state\+\_\+machine} (int input)
+\begin{DoxyCompactList}\small\item\em state machine that changes the game state according to the inputs given by the players \end{DoxyCompactList}\item 
+int \hyperlink{game_8h_a0ba54f993c5072ccad6ef0562e36443b}{timer\+\_\+state\+\_\+machine} (int input)
+\begin{DoxyCompactList}\small\item\em state machine that changes the game state according to the inputs given by the players ,makes the time pauses and draws the screen according to the current state \end{DoxyCompactList}\item 
+int \hyperlink{game_8h_a7bd272e601a5455dea734c829bf0feb4}{check\+Timeout} (int pause\+\_\+time)
+\begin{DoxyCompactList}\small\item\em is used to make a timeout(wait a number of seconds without doing anything) \end{DoxyCompactList}\item 
+int \hyperlink{game_8h_acee4b53c87749506d4f93ed0bdd32ccb}{compare\+\_\+arrays} (int $\ast$array1, int $\ast$array2, int size)
+\begin{DoxyCompactList}\small\item\em compares the first size positions of two arrays \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a7bd272e601a5455dea734c829bf0feb4}\label{game_8h_a7bd272e601a5455dea734c829bf0feb4}} 
+\index{game.\+h@{game.\+h}!check\+Timeout@{check\+Timeout}}
+\index{check\+Timeout@{check\+Timeout}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{check\+Timeout()}{checkTimeout()}}
+{\footnotesize\ttfamily int check\+Timeout (\begin{DoxyParamCaption}\item[{int}]{pause\+\_\+time }\end{DoxyParamCaption})}
+
+
+
+is used to make a timeout(wait a number of seconds without doing anything) 
+
+is useful between turns and other cases
+
+
+\begin{DoxyParams}{Parameters}
+{\em pause\+\_\+time} & indicates the timeout number of seconds\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if a timeout has started(only returns 1 in the beggining of the timeout, if we are in the middle of the timeout it returns 0), returns zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a7bd272e601a5455dea734c829bf0feb4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_acee4b53c87749506d4f93ed0bdd32ccb}\label{game_8h_acee4b53c87749506d4f93ed0bdd32ccb}} 
+\index{game.\+h@{game.\+h}!compare\+\_\+arrays@{compare\+\_\+arrays}}
+\index{compare\+\_\+arrays@{compare\+\_\+arrays}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{compare\+\_\+arrays()}{compare\_arrays()}}
+{\footnotesize\ttfamily int compare\+\_\+arrays (\begin{DoxyParamCaption}\item[{int $\ast$}]{array1,  }\item[{int $\ast$}]{array2,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+compares the first size positions of two arrays 
+
+if the first size positions are equal, then we consider both arrays equal
+
+
+\begin{DoxyParams}{Parameters}
+{\em array1} & first array to compare\\
+\hline
+{\em array2} & second array to compare\\
+\hline
+\end{DoxyParams}
+number of position to be compared
+
+\begin{DoxyReturn}{Returns}
+Returns 1 the arrays are equal, returns zero otherwise 
+\end{DoxyReturn}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_acee4b53c87749506d4f93ed0bdd32ccb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a434350c0629d48af15132bd626ff0e7b}\label{game_8h_a434350c0629d48af15132bd626ff0e7b}} 
+\index{game.\+h@{game.\+h}!simonsays@{simonsays}}
+\index{simonsays@{simonsays}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{simonsays()}{simonsays()}}
+{\footnotesize\ttfamily int simonsays (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+main function that calls the game interruption handlers and the game state machine funtions 
+
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a434350c0629d48af15132bd626ff0e7b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{game_8h_a434350c0629d48af15132bd626ff0e7b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a8101733e49b7935d3b1b8d2bb83dd42f}\label{game_8h_a8101733e49b7935d3b1b8d2bb83dd42f}} 
+\index{game.\+h@{game.\+h}!state\+\_\+machine@{state\+\_\+machine}}
+\index{state\+\_\+machine@{state\+\_\+machine}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{state\+\_\+machine()}{state\_machine()}}
+{\footnotesize\ttfamily void state\+\_\+machine (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})}
+
+
+
+state machine that changes the game state according to the inputs given by the players 
+
+This function is responsible for filling the arrays with the player inputs
+
+This function also changes the state acording to the button pressed on the main menu(\+S\+T\+A\+R\+T O\+R E\+X\+I\+T)
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input given by a player \\
+\hline
+\end{DoxyParams}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{game_8h_a8101733e49b7935d3b1b8d2bb83dd42f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a8101733e49b7935d3b1b8d2bb83dd42f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a0ba54f993c5072ccad6ef0562e36443b}\label{game_8h_a0ba54f993c5072ccad6ef0562e36443b}} 
+\index{game.\+h@{game.\+h}!timer\+\_\+state\+\_\+machine@{timer\+\_\+state\+\_\+machine}}
+\index{timer\+\_\+state\+\_\+machine@{timer\+\_\+state\+\_\+machine}!game.\+h@{game.\+h}}
+\subsubsection{\texorpdfstring{timer\+\_\+state\+\_\+machine()}{timer\_state\_machine()}}
+{\footnotesize\ttfamily int timer\+\_\+state\+\_\+machine (\begin{DoxyParamCaption}\item[{int}]{input }\end{DoxyParamCaption})}
+
+
+
+state machine that changes the game state according to the inputs given by the players ,makes the time pauses and draws the screen according to the current state 
+
+although it has the same states as the state machine, the timer state machine is also responsible for the time pauses.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & input given by a player\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Returns 1 if a timeout has started(only returns 1 in the beggining of the timeout, if we are in the middle of the timeout it returns 0), returns zero otherwise 
+\end{DoxyReturn}
+Here is the call graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a0ba54f993c5072ccad6ef0562e36443b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h_a0ba54f993c5072ccad6ef0562e36443b_icgraph}
+\end{center}
+\end{figure}
